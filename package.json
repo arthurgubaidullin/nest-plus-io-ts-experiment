@@ -2,7 +2,9 @@
   "name": "@nest-plus-io-ts-experiment/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "nx run-many --target build,test,lint --fix"
+  },
   "private": true,
   "devDependencies": {
     "@nestjs/schematics": "^10.0.1",
