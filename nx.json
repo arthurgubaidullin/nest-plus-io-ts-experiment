@@ -46,5 +46,15 @@
       "!{projectRoot}/eslint.config.js"
     ],
     "sharedGlobals": []
+  },
+  "generators": {
+    "@nx/js": {
+      "library": {
+        "unitTestRunner": "vitest",
+        "minimal": true,
+        "simpleName": true,
+        "strict": true
+      }
+    }
   }
 }
