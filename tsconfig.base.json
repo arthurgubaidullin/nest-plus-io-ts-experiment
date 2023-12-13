@@ -16,7 +16,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nest-plus-io-ts-experiment/io-ts-nest": ["io-ts-nest/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

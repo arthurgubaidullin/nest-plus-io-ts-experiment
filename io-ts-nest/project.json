@@ -1,0 +1,30 @@
+{
+  "name": "io-ts-nest",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "io-ts-nest/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/io-ts-nest",
+        "main": "io-ts-nest/src/index.ts",
+        "tsConfig": "io-ts-nest/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../coverage/io-ts-nest"
+      }
+    }
+  },
+  "tags": []
+}
