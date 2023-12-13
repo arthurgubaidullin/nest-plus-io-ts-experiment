@@ -17,6 +17,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nest-plus-io-ts-experiment/create": [
+        "todos/contracts/create/src/index.ts"
+      ],
       "@nest-plus-io-ts-experiment/io-ts-nest": ["io-ts-nest/src/index.ts"]
     }
   },
