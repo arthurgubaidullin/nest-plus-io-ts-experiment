@@ -1,1 +1,1 @@
-export * from './lib/io-ts-nest';
+export * from './lib/codec-pipe';

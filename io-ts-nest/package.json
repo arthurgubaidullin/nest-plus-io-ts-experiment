@@ -2,7 +2,10 @@
   "name": "@nest-plus-io-ts-experiment/io-ts-nest",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@nestjs/common": "^10.0.2",
+    "fp-ts": "^2.16.1",
+    "io-ts": "^2.2.21"
   },
   "type": "commonjs",
   "main": "./src/index.js",
