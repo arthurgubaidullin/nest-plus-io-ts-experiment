@@ -50,7 +50,7 @@
   "generators": {
     "@nx/js": {
       "library": {
-        "unitTestRunner": "vitest",
+        "unitTestRunner": "jest",
         "minimal": true,
         "simpleName": true,
         "strict": true
