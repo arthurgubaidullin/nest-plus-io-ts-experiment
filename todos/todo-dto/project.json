@@ -1,5 +1,5 @@
 {
-  "name": "todos-todo-dto",
+  "name": "todo-dto-in-todos",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "todos/todo-dto/src",
   "projectType": "library",

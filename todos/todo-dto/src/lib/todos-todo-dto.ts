@@ -1,3 +1,3 @@
 export function todosTodoDto(): string {
-  return 'todos-todo-dto';
+  return 'todo-dto-in-todos';
 }

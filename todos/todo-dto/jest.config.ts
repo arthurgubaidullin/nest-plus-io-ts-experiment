@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'todos-todo-dto',
+  displayName: 'todo-dto-in-todos',
   preset: '../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
