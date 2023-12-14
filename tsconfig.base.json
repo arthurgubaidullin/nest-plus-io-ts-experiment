@@ -23,6 +23,9 @@
       "@nest-plus-io-ts-experiment/create-todo-in-todos": [
         "todos/create-todo/src/index.ts"
       ],
+      "@nest-plus-io-ts-experiment/get-todos-in-todos": [
+        "todos/get-todos/src/index.ts"
+      ],
       "@nest-plus-io-ts-experiment/io-ts-nest": ["io-ts-nest/src/index.ts"],
       "@nest-plus-io-ts-experiment/modul-in-todos": [
         "todos/modul/src/index.ts"
