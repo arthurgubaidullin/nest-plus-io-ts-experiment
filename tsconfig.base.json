@@ -22,7 +22,7 @@
       "@nest-plus-io-ts-experiment/todos-todo-dto": [
         "todos/todo-dto/src/index.ts"
       ],
-      "@nest-plus-io-ts-experiment/todos/contracts/create": [
+      "@nest-plus-io-ts-experiment/todos-contracts-create": [
         "todos/contracts/create/src/index.ts"
       ]
     }

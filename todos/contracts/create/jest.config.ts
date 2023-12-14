@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'todos/contracts/create',
+  displayName: 'todos-contracts-create',
   preset: '../../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
