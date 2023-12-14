@@ -1,5 +1,5 @@
 {
-  "name": "todos-contracts-create",
+  "name": "create-todo-contract-in-todos",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "todos/contracts/create/src",
   "projectType": "library",
