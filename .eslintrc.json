@@ -13,10 +13,6 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
-              },
-              {
                 "sourceTag": "tier:app",
                 "onlyDependOnLibsWithTags": ["tier:api", "tier:lib"]
               },
