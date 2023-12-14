@@ -5,7 +5,7 @@ import { Injectable } from '@nestjs/common';
 export class TodosRepository {
   private readonly todos: Todo.Todo[] = [];
 
-  create(todo: Todo.Todo): void {
+  async create(todo: Todo.Todo): Promise<void> {
     this.todos.push(todo);
   }
 

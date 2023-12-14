@@ -6,5 +6,5 @@ export const createTodo =
   (repository: CreateTodo) =>
   async (data: CreateTodoCommand): Promise<void> => {
     const todo = Todo.create(data);
-    repository.create(todo);
+    await repository.create(todo);
   };
