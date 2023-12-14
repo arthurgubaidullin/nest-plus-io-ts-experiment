@@ -1,15 +1,15 @@
-import * as Todo from '@nest-plus-io-ts-experiment/todo-in-todos';
+import { TodoDpo } from '@nest-plus-io-ts-experiment/todo-dpo-in-todos';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class TodosRepository {
-  private readonly todos: Todo.Todo[] = [];
+  private readonly todos: TodoDpo[] = [];
 
-  async create(todo: Todo.Todo): Promise<void> {
+  async create(todo: TodoDpo): Promise<void> {
     this.todos.push(todo);
   }
 
-  async getAll(): Promise<readonly Todo.Todo[]> {
+  async getAll(): Promise<readonly TodoDpo[]> {
     return this.todos;
   }
 }
