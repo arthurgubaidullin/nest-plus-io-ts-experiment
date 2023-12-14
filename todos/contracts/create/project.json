@@ -1,5 +1,5 @@
 {
-  "name": "create",
+  "name": "todos/contracts/create",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "todos/contracts/create/src",
   "projectType": "library",
@@ -19,10 +19,10 @@
       "outputs": ["{options.outputFile}"]
     },
     "test": {
-      "executor": "@nx/vite:test",
-      "outputs": ["{options.reportsDirectory}"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "reportsDirectory": "../../../coverage/todos/contracts/create"
+        "jestConfig": "todos/contracts/create/jest.config.ts"
       }
     }
   },
