@@ -9,7 +9,7 @@ export class TodosRepository {
     this.todos.push(todo);
   }
 
-  getAll(): readonly Todo.Todo[] {
+  async getAll(): Promise<readonly Todo.Todo[]> {
     return this.todos;
   }
 }

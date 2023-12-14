@@ -10,6 +10,6 @@ export class TodosService {
   public readonly create = createTodo(this.repository);
 
   async getAll(): Promise<readonly TodoDto[]> {
-    return this.repository.getAll();
+    return await this.repository.getAll();
   }
 }
