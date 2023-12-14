@@ -1,5 +1,5 @@
 {
-  "name": "todo",
+  "name": "todos-todo",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "todos/todo/src",
   "projectType": "library",
