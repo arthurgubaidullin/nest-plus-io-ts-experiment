@@ -1,3 +1,6 @@
-export function todoDpoInTodos(): string {
-  return 'todo-dpo-in-todos';
+import { NonEmptyString } from 'io-ts-types';
+
+export interface TodoDpo {
+  readonly id: NonEmptyString;
+  readonly content: NonEmptyString;
 }
