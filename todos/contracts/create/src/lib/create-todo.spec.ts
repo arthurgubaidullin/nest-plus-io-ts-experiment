@@ -2,7 +2,7 @@ import { CreateTodo } from './create-todo';
 import { createTodoArb } from './create-todo-arb';
 import fc from 'fast-check';
 
-describe('create-todo', () => {
+describe('create-todo-in-todos', () => {
   it('should create CreateTodo', () => {
     fc.assert(
       fc.property(createTodoArb, (createTodo) => CreateTodo.is(createTodo))
