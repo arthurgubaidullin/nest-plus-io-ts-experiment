@@ -10,7 +10,7 @@ export class TodosInMemoryRepository implements TodosRepository {
     this.todos.push(todo);
   }
 
-  async getAll(): Promise<readonly TodoDpo[]> {
+  async getTodos(): Promise<readonly TodoDpo[]> {
     return this.todos;
   }
 }
