@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { TodosController } from './todos.controller';
 import { TodosService } from './todos.service';
-import { TodosRepository } from './todos.in-memory.repository';
+import { TodosInMemoryRepository } from './todos.in-memory.repository';
 
 describe('TodosController', () => {
   let controller: TodosController;
@@ -9,7 +9,7 @@ describe('TodosController', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [TodosController],
-      providers: [TodosService, TodosRepository],
+      providers: [TodosService, TodosInMemoryRepository],
     }).compile();
 
     controller = module.get<TodosController>(TodosController);

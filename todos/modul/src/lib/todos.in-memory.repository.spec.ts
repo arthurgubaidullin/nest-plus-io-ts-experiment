@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { TodosRepository } from './todos.in-memory.repository';
+import { TodosInMemoryRepository } from './todos.in-memory.repository';
 
 describe('TodosRepository', () => {
-  let repository: TodosRepository;
+  let repository: TodosInMemoryRepository;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [TodosRepository],
+      providers: [TodosInMemoryRepository],
     }).compile();
 
-    repository = module.get<TodosRepository>(TodosRepository);
+    repository = module.get<TodosInMemoryRepository>(TodosInMemoryRepository);
   });
 
   it('should be defined', () => {
