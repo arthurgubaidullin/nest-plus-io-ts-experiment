@@ -1,1 +1,1 @@
-export * from './lib/get-todos-in-todos';
+export * from './lib/get-todos';
