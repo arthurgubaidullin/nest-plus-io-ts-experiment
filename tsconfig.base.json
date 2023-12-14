@@ -24,6 +24,9 @@
       "@nest-plus-io-ts-experiment/modul-in-todos": [
         "todos/modul/src/index.ts"
       ],
+      "@nest-plus-io-ts-experiment/repository-type-in-todos": [
+        "todos/repository-type/src/index.ts"
+      ],
       "@nest-plus-io-ts-experiment/todo-dto-in-todos": [
         "todos/todo-dto/src/index.ts"
       ],
