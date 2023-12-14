@@ -1,4 +1,4 @@
 import { CreateTodo } from './create-todo';
-import { GetTodos } from './get-all-todos';
+import { GetTodos } from './get-todos';
 
 export type TodosRepository = CreateTodo & GetTodos;
