@@ -1,20 +1,20 @@
-import { CodecPipe } from '@nest-plus-io-ts-experiment/io-ts-nest';
-import { Body, Controller, Get, Post } from '@nestjs/common';
 import { CreateTodo } from '@nest-plus-io-ts-experiment/create-todo-contract-in-todos';
-import { TodosRepository } from './todos.repository';
+import { CodecPipe } from '@nest-plus-io-ts-experiment/io-ts-nest';
 import { TodoDto } from '@nest-plus-io-ts-experiment/todo-dto-in-todos';
+import { Body, Controller, Get, Post } from '@nestjs/common';
+import { TodosService } from './todos.service';
 
 @Controller('todos')
 export class TodosController {
-  constructor(private readonly repository: TodosRepository) {}
+  constructor(private readonly service: TodosService) {}
 
   @Post()
   async create(@Body(new CodecPipe(CreateTodo)) data: CreateTodo) {
-    return this.repository.create(data);
+    return this.service.create(data);
   }
 
   @Get()
   async getAll(): Promise<readonly TodoDto[]> {
-    return this.repository.getAll();
+    return this.service.getAll();
   }
 }
