@@ -1,0 +1,30 @@
+{
+  "name": "todo-dpo-in-todos",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "todos/todo-dpo/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/todos/todo-dpo",
+        "main": "todos/todo-dpo/src/index.ts",
+        "tsConfig": "todos/todo-dpo/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "todos/todo-dpo/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
