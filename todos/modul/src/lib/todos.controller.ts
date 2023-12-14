@@ -17,6 +17,6 @@ export class TodosController {
 
   @Get()
   async getAll(): Promise<readonly TodoDto[]> {
-    return this.service.getAll();
+    return this.service.getList();
   }
 }
