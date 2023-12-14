@@ -1,0 +1,30 @@
+{
+  "name": "todo",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "todos/todo/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/todos/todo",
+        "main": "todos/todo/src/index.ts",
+        "tsConfig": "todos/todo/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "todos/todo/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
