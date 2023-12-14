@@ -6,9 +6,9 @@
     "@nestjs/common": "^10.0.2",
     "@nest-plus-io-ts-experiment/io-ts-nest": "*",
     "@nest-plus-io-ts-experiment/create-todo-contract-in-todos": "*",
-    "@nest-plus-io-ts-experiment/todo-in-todos": "*",
     "@nest-plus-io-ts-experiment/todo-dto-in-todos": "*",
-    "@nest-plus-io-ts-experiment/create-todo-in-todos": "*"
+    "@nest-plus-io-ts-experiment/create-todo-in-todos": "*",
+    "@nest-plus-io-ts-experiment/todo-dpo-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",
