@@ -1,9 +1,8 @@
-import { EncodedCreateTodoCommand } from '@nest-plus-io-ts-experiment/create-todo-contract-in-todos';
 import axios from 'axios';
 
 describe('GET /api/todos', () => {
   it('should add todo', async () => {
-    const createTodo: EncodedCreateTodoCommand = {
+    const createTodo = {
       id: 'test',
       content: 'test',
     };
