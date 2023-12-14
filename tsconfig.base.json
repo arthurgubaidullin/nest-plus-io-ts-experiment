@@ -17,14 +17,17 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nest-plus-io-ts-experiment/create-todo-contract-in-todos": [
+        "todos/contracts/create/src/index.ts"
+      ],
       "@nest-plus-io-ts-experiment/io-ts-nest": ["io-ts-nest/src/index.ts"],
-      "@nest-plus-io-ts-experiment/todo-in-todos": ["todos/todo/src/index.ts"],
+      "@nest-plus-io-ts-experiment/modul-in-todos": [
+        "todos/modul/src/index.ts"
+      ],
       "@nest-plus-io-ts-experiment/todo-dto-in-todos": [
         "todos/todo-dto/src/index.ts"
       ],
-      "@nest-plus-io-ts-experiment/create-todo-contract-in-todos": [
-        "todos/contracts/create/src/index.ts"
-      ]
+      "@nest-plus-io-ts-experiment/todo-in-todos": ["todos/todo/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
