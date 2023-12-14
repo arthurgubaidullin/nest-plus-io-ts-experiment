@@ -1,5 +1,5 @@
 {
-  "name": "@nest-plus-io-ts-experiment/todos-todo",
+  "name": "@nest-plus-io-ts-experiment/todo-in-todos",
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",

@@ -18,7 +18,7 @@
     "baseUrl": ".",
     "paths": {
       "@nest-plus-io-ts-experiment/io-ts-nest": ["io-ts-nest/src/index.ts"],
-      "@nest-plus-io-ts-experiment/todos-todo": ["todos/todo/src/index.ts"],
+      "@nest-plus-io-ts-experiment/todo-in-todos": ["todos/todo/src/index.ts"],
       "@nest-plus-io-ts-experiment/todos-todo-dto": [
         "todos/todo-dto/src/index.ts"
       ],
