@@ -1,3 +1,6 @@
-export function todosTodoDto(): string {
-  return 'todo-dto-in-todos';
+import { NonEmptyString } from 'io-ts-types';
+
+export interface Todo {
+  readonly id: NonEmptyString;
+  readonly content: NonEmptyString;
 }
