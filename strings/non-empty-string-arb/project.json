@@ -1,0 +1,30 @@
+{
+  "name": "non-empty-string-arb",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "strings/non-empty-string-arb/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/strings/non-empty-string-arb",
+        "main": "strings/non-empty-string-arb/src/index.ts",
+        "tsConfig": "strings/non-empty-string-arb/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "strings/non-empty-string-arb/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}

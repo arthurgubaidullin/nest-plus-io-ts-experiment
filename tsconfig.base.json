@@ -30,6 +30,9 @@
       "@nest-plus-io-ts-experiment/modul-in-todos": [
         "todos/modul/src/index.ts"
       ],
+      "@nest-plus-io-ts-experiment/non-empty-string-arb": [
+        "strings/non-empty-string-arb/src/index.ts"
+      ],
       "@nest-plus-io-ts-experiment/repository-type-in-todos": [
         "todos/repository-type/src/index.ts"
       ],
