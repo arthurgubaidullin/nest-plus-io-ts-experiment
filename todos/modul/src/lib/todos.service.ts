@@ -1,11 +1,11 @@
 import { createTodo } from '@nest-plus-io-ts-experiment/create-todo-in-todos';
 import { TodoDto } from '@nest-plus-io-ts-experiment/todo-dto-in-todos';
 import { Injectable } from '@nestjs/common';
-import { TodosRepository } from './todos.repository';
+import { InMemoryRepository } from './todos.repository';
 
 @Injectable()
 export class TodosService {
-  constructor(private readonly repository: TodosRepository) {}
+  constructor(private readonly repository: InMemoryRepository) {}
 
   public readonly create = createTodo(this.repository);
 
