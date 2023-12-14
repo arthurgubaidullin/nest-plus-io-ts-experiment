@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { TodosService } from './todos.service';
-import { TodosRepository } from './todos.repository';
+import { TodosRepository } from './todos.in-memory.repository';
 
 describe('TodosService', () => {
   let service: TodosService;

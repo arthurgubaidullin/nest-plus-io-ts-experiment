@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { InMemoryRepository } from './todos.repository';
+import { InMemoryRepository } from './todos.in-memory.repository';
 import { TodosController } from './todos.controller';
 import { TodosService } from './todos.service';
 
