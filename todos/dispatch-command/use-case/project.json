@@ -1,16 +1,16 @@
 {
-  "name": "dispatch-commands-in-todos",
+  "name": "dispatch-command-in-todos",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "todos/dispatch-commands/use-case/src",
+  "sourceRoot": "todos/dispatch-command/use-case/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/todos/dispatch-commands/use-case",
-        "main": "todos/dispatch-commands/use-case/src/index.ts",
-        "tsConfig": "todos/dispatch-commands/use-case/tsconfig.lib.json",
+        "outputPath": "dist/todos/dispatch-command/use-case",
+        "main": "todos/dispatch-command/use-case/src/index.ts",
+        "tsConfig": "todos/dispatch-command/use-case/tsconfig.lib.json",
         "assets": []
       }
     },
@@ -22,7 +22,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "todos/dispatch-commands/use-case/jest.config.ts"
+        "jestConfig": "todos/dispatch-command/use-case/jest.config.ts"
       }
     }
   },
