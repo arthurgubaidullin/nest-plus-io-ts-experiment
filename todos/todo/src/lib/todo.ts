@@ -1,5 +1,9 @@
-import * as O from 'fp-ts/Option';
+import * as E from 'fp-ts/Either';
+import { pipe } from 'fp-ts/function';
 import { NonEmptyString } from 'io-ts-types';
+import { FailedToChangeTodo } from './failed-to-change-todo';
+import { InvalidState } from './invalid-state';
+import * as UpdatedAt from './updated-at';
 
 enum State {
   InProgress = 'IN_PROGRESS',
@@ -11,7 +15,7 @@ export interface Todo {
   readonly content: NonEmptyString;
   readonly state: State;
   readonly createdAt: Date;
-  readonly updatedAt: O.Option<Date>;
+  readonly updatedAt: UpdatedAt.UpdatedAt;
 }
 
 export const create = (
@@ -26,6 +30,34 @@ export const create = (
     state: State.InProgress,
     content: data.content,
     createdAt: data.createdAt,
-    updatedAt: O.none,
+    updatedAt: UpdatedAt.create(),
   };
 };
+
+export const changeContent =
+  (
+    data: Readonly<{
+      content: NonEmptyString;
+      updatedAt: Date;
+    }>
+  ) =>
+  (todo: Todo): E.Either<FailedToChangeTodo, Todo> =>
+    pipe(
+      E.Do,
+      E.bindW('updatedAt', () => pipe(todo, UpdatedAt.change(data))),
+      E.chainW(
+        E.fromPredicate(
+          () => todo.state === State.InProgress,
+          () => new InvalidState()
+        )
+      ),
+      E.map(
+        ({ updatedAt }): Todo => ({
+          id: todo.id,
+          state: State.InProgress,
+          content: data.content,
+          createdAt: todo.createdAt,
+          updatedAt: updatedAt,
+        })
+      )
+    );
