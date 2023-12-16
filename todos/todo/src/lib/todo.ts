@@ -61,3 +61,31 @@ export const changeContent =
         })
       )
     );
+
+export const changeState =
+  (
+    data: Readonly<{
+      state: State;
+      updatedAt: Date;
+    }>
+  ) =>
+  (todo: Todo): E.Either<FailedToChangeTodo, Todo> =>
+    pipe(
+      E.Do,
+      E.bindW('updatedAt', () => pipe(todo, UpdatedAt.change(data))),
+      E.chainW(
+        E.fromPredicate(
+          () => todo.state === data.state,
+          () => new InvalidState()
+        )
+      ),
+      E.map(
+        ({ updatedAt }): Todo => ({
+          id: todo.id,
+          state: data.state,
+          content: todo.content,
+          createdAt: todo.createdAt,
+          updatedAt: updatedAt,
+        })
+      )
+    );
