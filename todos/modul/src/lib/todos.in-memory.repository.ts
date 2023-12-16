@@ -1,4 +1,7 @@
-import { TodosRepository } from '@nest-plus-io-ts-experiment/repository-type-in-todos';
+import {
+  Filters,
+  TodosRepository,
+} from '@nest-plus-io-ts-experiment/repository-type-in-todos';
 import { TodoDpo } from '@nest-plus-io-ts-experiment/todo-dpo-in-todos';
 import { Injectable } from '@nestjs/common';
 
@@ -10,7 +13,13 @@ export class TodosInMemoryRepository implements TodosRepository {
     this.todos.push(todo);
   }
 
-  async getList(): Promise<readonly TodoDpo[]> {
-    return this.todos;
+  async getList(
+    data?: Readonly<{ filters?: Filters }>
+  ): Promise<readonly TodoDpo[]> {
+    let todos = this.todos;
+    if (data?.filters?.completed) {
+      todos = todos.filter((todo) => todo.state === 'COMPLETED');
+    }
+    return todos;
   }
 }
