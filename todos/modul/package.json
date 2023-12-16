@@ -10,8 +10,8 @@
     "@nest-plus-io-ts-experiment/todo-dpo-in-todos": "*",
     "@nest-plus-io-ts-experiment/repository-type-in-todos": "*",
     "@nest-plus-io-ts-experiment/get-todos-in-todos": "*",
-    "io-ts": "^2.2.21",
-    "@nest-plus-io-ts-experiment/create-todo-contract-in-todos": "*"
+    "@nest-plus-io-ts-experiment/create-todo-contract-in-todos": "*",
+    "@nest-plus-io-ts-experiment/get-todos-contract-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",

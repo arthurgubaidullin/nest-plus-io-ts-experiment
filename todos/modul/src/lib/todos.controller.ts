@@ -1,11 +1,8 @@
 import { CreateTodoCommand } from '@nest-plus-io-ts-experiment/create-todo-contract-in-todos';
+import { EncodedGetTodosResponse } from '@nest-plus-io-ts-experiment/get-todos-contract-in-todos';
 import { CodecPipe } from '@nest-plus-io-ts-experiment/io-ts-nest';
-import {
-  TodoDto,
-  TodoDtoList,
-} from '@nest-plus-io-ts-experiment/todo-dto-in-todos';
+import { TodoDtoList } from '@nest-plus-io-ts-experiment/todo-dto-in-todos';
 import { Body, Controller, Get, Post } from '@nestjs/common';
-import { OutputOf } from 'io-ts';
 import { TodosService } from './todos.service';
 
 @Controller('todos')
@@ -20,7 +17,7 @@ export class TodosController {
   }
 
   @Get()
-  async getAll(): Promise<readonly OutputOf<typeof TodoDto>[]> {
+  async getAll(): Promise<EncodedGetTodosResponse> {
     const todos = await this.service.getList();
     return TodoDtoList.encode(todos);
   }
