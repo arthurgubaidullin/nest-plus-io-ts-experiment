@@ -63,7 +63,10 @@
       "@nest-plus-io-ts-experiment/todo-dto-in-todos": [
         "todos/todo-dto/src/index.ts"
       ],
-      "@nest-plus-io-ts-experiment/todo-in-todos": ["todos/todo/src/index.ts"]
+      "@nest-plus-io-ts-experiment/todo-in-todos": ["todos/todo/src/index.ts"],
+      "@nest-plus-io-ts-experiment/use-todos-in-todos": [
+        "todos/use-todos/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
