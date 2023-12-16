@@ -5,16 +5,12 @@ import { NonEmptyString } from 'io-ts-types';
 import { FailedToChangeTodo } from './failed-to-change-todo';
 import { InvalidState } from './invalid-state';
 import * as UpdatedAt from './updated-at';
-
-enum State {
-  InProgress = 'IN_PROGRESS',
-  Completed = 'COMPLETED',
-}
+import * as State from './state';
 
 export interface Todo {
   readonly id: NonEmptyString;
   readonly content: NonEmptyString;
-  readonly state: State;
+  readonly state: State.State;
   readonly createdAt: Date;
   readonly updatedAt: UpdatedAt.UpdatedAt;
 }
@@ -28,7 +24,7 @@ export const create = (
 ): Todo => {
   return {
     id: data.id,
-    state: State.InProgress,
+    state: State.State.InProgress,
     content: data.content,
     createdAt: data.createdAt,
     updatedAt: UpdatedAt.create(),
@@ -39,13 +35,13 @@ export const fromDpo = (
   dpo: Readonly<{
     id: NonEmptyString;
     content: NonEmptyString;
-    state: 'IN_PROGRESS' | 'COMPLETED';
+    state: State.StateSimplified;
     createdAt: Date;
     updatedAt: O.Option<Date>;
   }>
 ): Todo => ({
   ...dpo,
-  state: dpo.state === State.InProgress ? State.InProgress : State.Completed,
+  state: State.lift(dpo.state),
 });
 
 export const changeContent =
@@ -61,14 +57,14 @@ export const changeContent =
       E.bindW('updatedAt', () => pipe(todo, UpdatedAt.change(data))),
       E.chainW(
         E.fromPredicate(
-          () => todo.state === State.InProgress,
+          () => todo.state === State.State.InProgress,
           () => new InvalidState()
         )
       ),
       E.map(
         ({ updatedAt }): Todo => ({
           id: todo.id,
-          state: State.InProgress,
+          state: State.State.InProgress,
           content: data.content,
           createdAt: todo.createdAt,
           updatedAt: updatedAt,
@@ -79,7 +75,7 @@ export const changeContent =
 export const changeState =
   (
     data: Readonly<{
-      state: State;
+      state: State.StateSimplified;
       updatedAt: Date;
     }>
   ) =>
@@ -96,7 +92,7 @@ export const changeState =
       E.map(
         ({ updatedAt }): Todo => ({
           id: todo.id,
-          state: data.state,
+          state: State.lift(data.state),
           content: todo.content,
           createdAt: todo.createdAt,
           updatedAt: updatedAt,
