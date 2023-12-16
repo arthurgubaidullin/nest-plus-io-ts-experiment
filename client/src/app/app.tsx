@@ -2,10 +2,13 @@
 import styles from './app.module.css';
 
 import { Route, Routes, Link } from 'react-router-dom';
+import { TodoList } from './todos';
 
 export function App() {
   return (
     <div>
+      <TodoList />
+
       {/* START: routes */}
       {/* These routes and navigation have been generated for you */}
       {/* Feel free to move and update them to fit your needs */}
