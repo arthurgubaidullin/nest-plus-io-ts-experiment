@@ -4,4 +4,5 @@ import { nonEmptyStringArb } from '@nest-plus-io-ts-experiment/non-empty-string-
 export const createTodoArb = fc.record({
   id: nonEmptyStringArb,
   content: nonEmptyStringArb,
+  createdAt: fc.date(),
 });
