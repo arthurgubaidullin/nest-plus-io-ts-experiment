@@ -1,4 +1,5 @@
 import * as E from 'fp-ts/Either';
+import * as O from 'fp-ts/Option';
 import { pipe } from 'fp-ts/function';
 import { NonEmptyString } from 'io-ts-types';
 import { FailedToChangeTodo } from './failed-to-change-todo';
@@ -33,6 +34,19 @@ export const create = (
     updatedAt: UpdatedAt.create(),
   };
 };
+
+export const fromDpo = (
+  dpo: Readonly<{
+    id: NonEmptyString;
+    content: NonEmptyString;
+    state: 'IN_PROGRESS' | 'COMPLETED';
+    createdAt: Date;
+    updatedAt: O.Option<Date>;
+  }>
+): Todo => ({
+  ...dpo,
+  state: dpo.state === State.InProgress ? State.InProgress : State.Completed,
+});
 
 export const changeContent =
   (
