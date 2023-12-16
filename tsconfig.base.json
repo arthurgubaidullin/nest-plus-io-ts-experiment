@@ -29,11 +29,11 @@
       "@nest-plus-io-ts-experiment/create-todo-in-todos": [
         "todos/create-todo/use-case/src/index.ts"
       ],
+      "@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos": [
+        "todos/dispatch-command/contract/src/index.ts"
+      ],
       "@nest-plus-io-ts-experiment/dispatch-command-in-todos": [
         "todos/dispatch-command/use-case/src/index.ts"
-      ],
-      "@nest-plus-io-ts-experiment/dispatch-commands-contract-in-todos": [
-        "todos/dispatch-commands/contract/src/index.ts"
       ],
       "@nest-plus-io-ts-experiment/get-todos-contract-in-todos": [
         "todos/get-todos/contract/src/index.ts"

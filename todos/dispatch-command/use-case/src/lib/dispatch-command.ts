@@ -4,7 +4,7 @@ import {
   changeTodoState,
 } from '@nest-plus-io-ts-experiment/change-todo-in-todos';
 import { createTodo } from '@nest-plus-io-ts-experiment/create-todo-in-todos';
-import { TodosCommands } from '@nest-plus-io-ts-experiment/dispatch-commands-contract-in-todos';
+import { TodosCommands } from '@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos';
 import {
   CreateTodo,
   GetTodo,

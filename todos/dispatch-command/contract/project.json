@@ -1,16 +1,16 @@
 {
-  "name": "dispatch-commands-contract-in-todos",
+  "name": "dispatch-command-contract-in-todos",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "todos/dispatch-commands/contract/src",
+  "sourceRoot": "todos/dispatch-command/contract/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/todos/dispatch-commands/contract",
-        "main": "todos/dispatch-commands/contract/src/index.ts",
-        "tsConfig": "todos/dispatch-commands/contract/tsconfig.lib.json",
+        "outputPath": "dist/todos/dispatch-command/contract",
+        "main": "todos/dispatch-command/contract/src/index.ts",
+        "tsConfig": "todos/dispatch-command/contract/tsconfig.lib.json",
         "assets": []
       }
     },
@@ -22,7 +22,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "todos/dispatch-commands/contract/jest.config.ts"
+        "jestConfig": "todos/dispatch-command/contract/jest.config.ts"
       }
     }
   },
