@@ -2,7 +2,10 @@
   "name": "@nest-plus-io-ts-experiment/get-todos-http-handler",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@nest-plus-io-ts-experiment/get-todos-contract-in-todos": "*",
+    "@nest-plus-io-ts-experiment/get-todos-in-todos": "*",
+    "@nest-plus-io-ts-experiment/repository-type-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",
