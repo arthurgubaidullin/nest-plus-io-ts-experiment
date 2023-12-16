@@ -1,8 +1,8 @@
 import { TodoDtoList } from '@nest-plus-io-ts-experiment/todo-dto-in-todos';
-import { OutputOf, TypeOf } from 'io-ts';
+import * as t from 'io-ts';
 
-export type GetTodosResponse = TypeOf<typeof GetTodosResponse>;
+export type GetTodosResponse = t.TypeOf<typeof GetTodosResponse>;
 
-export type EncodedGetTodosResponse = OutputOf<typeof GetTodosResponse>;
+export type EncodedGetTodosResponse = t.OutputOf<typeof GetTodosResponse>;
 
 export const GetTodosResponse = TodoDtoList;
