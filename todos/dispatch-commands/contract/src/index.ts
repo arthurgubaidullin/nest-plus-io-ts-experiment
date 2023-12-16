@@ -1,1 +1,1 @@
-export * from './lib/dispatch-commands-contract-in-todos';
+export * from './lib/todos-commands';
