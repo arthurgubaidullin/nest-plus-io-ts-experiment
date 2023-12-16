@@ -5,6 +5,7 @@ describe('GET /api/todos', () => {
     const createTodo = {
       id: 'test',
       content: 'test',
+      createdAt: new Date().toISOString(),
     };
     const res = await axios.post(`/api/todos`, createTodo);
 
@@ -20,8 +21,16 @@ describe('GET /api/todos', () => {
   });
 
   it('should get all todo', async () => {
+    const createTodo = {
+      id: 'test',
+      content: 'test',
+      createdAt: new Date().toISOString(),
+    };
+    await axios.post(`/api/todos`, createTodo);
+
     const res = await axios.get(`/api/todos`);
 
     expect(res.status).toBe(200);
+    expect(res.data).toBeDefined();
   });
 });
