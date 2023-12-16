@@ -1,9 +1,11 @@
+import * as O from 'fp-ts/Option';
 import { NonEmptyString } from 'io-ts-types';
 
 export interface Todo {
   readonly id: NonEmptyString;
   readonly content: NonEmptyString;
   readonly createdAt: Date;
+  readonly updatedAt: O.Option<Date>;
 }
 
 export const create = (
@@ -17,5 +19,6 @@ export const create = (
     id: data.id,
     content: data.content,
     createdAt: data.createdAt,
+    updatedAt: O.none,
   };
 };
