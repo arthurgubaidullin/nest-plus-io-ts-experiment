@@ -24,7 +24,7 @@
         "todos/create-todo/use-case/src/index.ts"
       ],
       "@nest-plus-io-ts-experiment/get-todos-in-todos": [
-        "todos/get-todos/src/index.ts"
+        "todos/get-todos/use-case/src/index.ts"
       ],
       "@nest-plus-io-ts-experiment/io-ts-nest": ["io-ts-nest/src/index.ts"],
       "@nest-plus-io-ts-experiment/modul-in-todos": [

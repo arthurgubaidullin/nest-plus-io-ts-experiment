@@ -1,16 +1,16 @@
 {
   "name": "get-todos-in-todos",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "todos/get-todos/src",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "todos/get-todos/use-case/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/todos/get-todos",
-        "main": "todos/get-todos/src/index.ts",
-        "tsConfig": "todos/get-todos/tsconfig.lib.json",
+        "outputPath": "dist/todos/get-todos/use-case",
+        "main": "todos/get-todos/use-case/src/index.ts",
+        "tsConfig": "todos/get-todos/use-case/tsconfig.lib.json",
         "assets": []
       }
     },
@@ -22,7 +22,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "todos/get-todos/jest.config.ts"
+        "jestConfig": "todos/get-todos/use-case/jest.config.ts"
       }
     }
   },
