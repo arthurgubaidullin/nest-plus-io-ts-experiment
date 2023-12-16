@@ -1,16 +1,16 @@
 {
   "name": "create-todo-in-todos",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "todos/create-todo/src",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "todos/create-todo/use-case/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/todos/create-todo",
-        "main": "todos/create-todo/src/index.ts",
-        "tsConfig": "todos/create-todo/tsconfig.lib.json",
+        "outputPath": "dist/todos/create-todo/use-case",
+        "main": "todos/create-todo/use-case/src/index.ts",
+        "tsConfig": "todos/create-todo/use-case/tsconfig.lib.json",
         "assets": []
       }
     },
@@ -22,7 +22,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "todos/create-todo/jest.config.ts"
+        "jestConfig": "todos/create-todo/use-case/jest.config.ts"
       }
     }
   },

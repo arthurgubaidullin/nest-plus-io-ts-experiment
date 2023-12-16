@@ -21,7 +21,7 @@
         "todos/contracts/create/src/index.ts"
       ],
       "@nest-plus-io-ts-experiment/create-todo-in-todos": [
-        "todos/create-todo/src/index.ts"
+        "todos/create-todo/use-case/src/index.ts"
       ],
       "@nest-plus-io-ts-experiment/get-todos-in-todos": [
         "todos/get-todos/src/index.ts"
