@@ -3,9 +3,8 @@ import { dispatchCommandHandler } from '@nest-plus-io-ts-experiment/dispatch-com
 import {
   EncodedGetTodosResponse,
   GetTodosQuery,
-  GetTodosResponse,
 } from '@nest-plus-io-ts-experiment/get-todos-contract-in-todos';
-import { getTodoLists } from '@nest-plus-io-ts-experiment/get-todos-in-todos';
+import { getTodos } from '@nest-plus-io-ts-experiment/get-todos-http-handler';
 import { CodecPipe } from '@nest-plus-io-ts-experiment/io-ts-nest';
 import { Body, Controller, Get, Post, Query } from '@nestjs/common';
 import { TodosInMemoryRepository } from './todos.in-memory.repository';
@@ -25,7 +24,6 @@ export class TodosController {
   async getAll(
     @Query(new CodecPipe(GetTodosQuery)) query: GetTodosQuery
   ): Promise<EncodedGetTodosResponse> {
-    const todos = await getTodoLists(this.repository)(query);
-    return GetTodosResponse.encode(todos);
+    return getTodos(this.repository)(query);
   }
 }
