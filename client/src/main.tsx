@@ -1,7 +1,8 @@
+import { ConfigProvider } from '@nest-plus-io-ts-experiment/client-config';
+import * as O from 'fp-ts/Option';
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-
 import App from './app/app';
 
 const root = ReactDOM.createRoot(
@@ -9,8 +10,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ConfigProvider value={O.some({ host: '//localhost:3000' })}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ConfigProvider>
   </StrictMode>
 );
