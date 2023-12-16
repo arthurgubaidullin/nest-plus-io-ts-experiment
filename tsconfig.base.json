@@ -47,6 +47,9 @@
       "@nest-plus-io-ts-experiment/get-todos-in-todos": [
         "todos/get-todos/use-case/src/index.ts"
       ],
+      "@nest-plus-io-ts-experiment/get-todos-via-fetch-in-todos": [
+        "todos/get-todos/via-fetch/src/index.ts"
+      ],
       "@nest-plus-io-ts-experiment/io-ts-nest": ["io-ts-nest/src/index.ts"],
       "@nest-plus-io-ts-experiment/modul-in-todos": [
         "todos/modul/src/index.ts"

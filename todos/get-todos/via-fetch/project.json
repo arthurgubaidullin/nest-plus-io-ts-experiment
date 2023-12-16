@@ -1,0 +1,30 @@
+{
+  "name": "get-todos-via-fetch-in-todos",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "todos/get-todos/via-fetch/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/todos/get-todos/via-fetch",
+        "main": "todos/get-todos/via-fetch/src/index.ts",
+        "tsConfig": "todos/get-todos/via-fetch/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "todos/get-todos/via-fetch/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["tier:api"]
+}
