@@ -1,1 +1,1 @@
-export * from './lib/change-todo-contract-in-todos';
+export * from './lib/change-todo-content-command';
