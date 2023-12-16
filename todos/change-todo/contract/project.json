@@ -1,0 +1,30 @@
+{
+  "name": "change-todo-contract-in-todos",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "todos/change-todo/contract/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/todos/change-todo/contract",
+        "main": "todos/change-todo/contract/src/index.ts",
+        "tsConfig": "todos/change-todo/contract/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "todos/change-todo/contract/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
