@@ -9,3 +9,7 @@ export const TodoDto = t.readonly(
     content: NonEmptyString,
   })
 );
+
+export type TodoDtoList = t.TypeOf<typeof TodoDtoList>;
+
+export const TodoDtoList = t.readonlyArray(TodoDto);
