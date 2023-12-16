@@ -32,6 +32,9 @@
       "@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos": [
         "todos/dispatch-command/contract/src/index.ts"
       ],
+      "@nest-plus-io-ts-experiment/dispatch-command-http-handler-in-todos": [
+        "todos/dispatch-command/http-handler/src/index.ts"
+      ],
       "@nest-plus-io-ts-experiment/dispatch-command-in-todos": [
         "todos/dispatch-command/use-case/src/index.ts"
       ],
