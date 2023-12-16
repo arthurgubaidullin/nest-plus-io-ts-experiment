@@ -1,1 +1,1 @@
-export * from './lib/get-todos-http-handler';
+export * from './lib/get-todos';
