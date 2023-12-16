@@ -1,16 +1,16 @@
 {
-  "name": "create-todo-contract-in-todos",
+  "name": "create-todo-command-in-todos",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "todos/contracts/create/src",
+  "sourceRoot": "todos/create-todo/command/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/todos/contracts/create",
-        "main": "todos/contracts/create/src/index.ts",
-        "tsConfig": "todos/contracts/create/tsconfig.lib.json",
+        "outputPath": "dist/todos/create-todo/command",
+        "main": "todos/create-todo/command/src/index.ts",
+        "tsConfig": "todos/create-todo/command/tsconfig.lib.json",
         "assets": []
       }
     },
@@ -22,7 +22,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "todos/contracts/create/jest.config.ts"
+        "jestConfig": "todos/create-todo/command/jest.config.ts"
       }
     }
   },

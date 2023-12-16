@@ -17,8 +17,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nest-plus-io-ts-experiment/create-todo-contract-in-todos": [
-        "todos/contracts/create/src/index.ts"
+      "@nest-plus-io-ts-experiment/create-todo-command-in-todos": [
+        "todos/create-todo/command/src/index.ts"
       ],
       "@nest-plus-io-ts-experiment/create-todo-in-todos": [
         "todos/create-todo/use-case/src/index.ts"

@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",
-    "@nest-plus-io-ts-experiment/create-todo-contract-in-todos": "*",
     "@nest-plus-io-ts-experiment/repository-type-in-todos": "*",
-    "@nest-plus-io-ts-experiment/todo-in-todos": "*"
+    "@nest-plus-io-ts-experiment/todo-in-todos": "*",
+    "@nest-plus-io-ts-experiment/create-todo-command-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",
