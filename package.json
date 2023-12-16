@@ -59,6 +59,7 @@
     "vitest": "~0.34.6"
   },
   "dependencies": {
+    "@devexperts/remote-data-ts": "^2.1.1",
     "@nestjs/common": "^10.0.2",
     "@nestjs/core": "^10.0.2",
     "@nestjs/platform-express": "^10.0.2",
