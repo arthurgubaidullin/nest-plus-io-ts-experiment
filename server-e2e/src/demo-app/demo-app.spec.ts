@@ -1,11 +1,12 @@
 import axios from 'axios';
+import { randomUUID } from 'crypto';
 
 describe('GET /api/todos', () => {
   it('should add todo', async () => {
     const createTodo = {
       _tag: 'CreateTodo',
       value: {
-        id: 'test',
+        id: 'test' + randomUUID(),
         content: 'test',
         createdAt: new Date().toISOString(),
       },
@@ -16,7 +17,7 @@ describe('GET /api/todos', () => {
   });
 
   it('should not add todo', async () => {
-    const createTodo = { id: 'test' };
+    const createTodo = { id: 'test' + randomUUID() };
 
     expect(
       async () => await axios.post(`/api/todos/commands`, createTodo)
@@ -27,7 +28,7 @@ describe('GET /api/todos', () => {
     const createTodo = {
       _tag: 'CreateTodo',
       value: {
-        id: 'test',
+        id: 'test' + randomUUID(),
         content: 'test',
         createdAt: new Date().toISOString(),
       },
