@@ -1,0 +1,30 @@
+{
+  "name": "get-todos-contract-in-todos",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "todos/get-todos/contract/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/todos/get-todos/contract",
+        "main": "todos/get-todos/contract/src/index.ts",
+        "tsConfig": "todos/get-todos/contract/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "todos/get-todos/contract/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
