@@ -1,7 +1,7 @@
 {
-  "name": "demo-app",
+  "name": "server",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "demo-app/src",
+  "sourceRoot": "server/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -11,11 +11,11 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
-        "outputPath": "dist/demo-app",
-        "main": "demo-app/src/main.ts",
-        "tsConfig": "demo-app/tsconfig.app.json",
-        "assets": ["demo-app/src/assets"],
-        "webpackConfig": "demo-app/webpack.config.js"
+        "outputPath": "dist/server",
+        "main": "server/src/main.ts",
+        "tsConfig": "server/tsconfig.app.json",
+        "assets": ["server/src/assets"],
+        "webpackConfig": "server/webpack.config.js"
       },
       "configurations": {
         "development": {},
@@ -26,14 +26,14 @@
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "demo-app:build"
+        "buildTarget": "server:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "demo-app:build:development"
+          "buildTarget": "server:build:development"
         },
         "production": {
-          "buildTarget": "demo-app:build:production"
+          "buildTarget": "server:build:production"
         }
       }
     },
@@ -45,7 +45,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "demo-app/jest.config.ts"
+        "jestConfig": "server/jest.config.ts"
       }
     }
   },

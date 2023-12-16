@@ -1,14 +1,14 @@
 {
-  "name": "demo-app-e2e",
+  "name": "server-e2e",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "implicitDependencies": ["demo-app"],
+  "implicitDependencies": ["server"],
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{e2eProjectRoot}"],
       "options": {
-        "jestConfig": "demo-app-e2e/jest.config.ts",
+        "jestConfig": "server-e2e/jest.config.ts",
         "passWithNoTests": true
       }
     },
