@@ -1,1 +1,2 @@
-export * from './lib/client-config';
+export * from './lib/use-config';
+export * from './lib/config-provider';
