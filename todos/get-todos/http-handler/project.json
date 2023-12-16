@@ -1,0 +1,30 @@
+{
+  "name": "get-todos-http-handler",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "todos/get-todos/http-handler/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/todos/get-todos/http-handler",
+        "main": "todos/get-todos/http-handler/src/index.ts",
+        "tsConfig": "todos/get-todos/http-handler/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "todos/get-todos/http-handler/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["tier:api"]
+}

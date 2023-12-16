@@ -41,6 +41,9 @@
       "@nest-plus-io-ts-experiment/get-todos-contract-in-todos": [
         "todos/get-todos/contract/src/index.ts"
       ],
+      "@nest-plus-io-ts-experiment/get-todos-http-handler": [
+        "todos/get-todos/http-handler/src/index.ts"
+      ],
       "@nest-plus-io-ts-experiment/get-todos-in-todos": [
         "todos/get-todos/use-case/src/index.ts"
       ],
