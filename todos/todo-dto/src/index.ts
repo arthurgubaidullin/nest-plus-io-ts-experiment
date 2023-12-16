@@ -1,1 +1,1 @@
-export * from './lib/todos-todo-dto';
+export * from './lib/todo-dto';
