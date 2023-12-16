@@ -3,11 +3,14 @@ import axios from 'axios';
 describe('GET /api/todos', () => {
   it('should add todo', async () => {
     const createTodo = {
-      id: 'test',
-      content: 'test',
-      createdAt: new Date().toISOString(),
+      _tag: 'CreateTodo',
+      value: {
+        id: 'test',
+        content: 'test',
+        createdAt: new Date().toISOString(),
+      },
     };
-    const res = await axios.post(`/api/todos`, createTodo);
+    const res = await axios.post(`/api/todos/commands`, createTodo);
 
     expect(res.status).toBe(201);
   });
@@ -16,17 +19,20 @@ describe('GET /api/todos', () => {
     const createTodo = { id: 'test' };
 
     expect(
-      async () => await axios.post(`/api/todos`, createTodo)
+      async () => await axios.post(`/api/todos/commands`, createTodo)
     ).rejects.toThrow();
   });
 
   it('should get all todo', async () => {
     const createTodo = {
-      id: 'test',
-      content: 'test',
-      createdAt: new Date().toISOString(),
+      _tag: 'CreateTodo',
+      value: {
+        id: 'test',
+        content: 'test',
+        createdAt: new Date().toISOString(),
+      },
     };
-    await axios.post(`/api/todos`, createTodo);
+    await axios.post(`/api/todos/commands`, createTodo);
 
     const res = await axios.get(`/api/todos`);
 
