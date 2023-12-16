@@ -12,7 +12,7 @@
     "fp-ts": "^2.16.1",
     "io-ts-types": "^0.5.19",
     "@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos": "*",
-    "@nest-plus-io-ts-experiment/dispatch-command-in-todos": "*"
+    "@nest-plus-io-ts-experiment/dispatch-command-http-handler-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",
