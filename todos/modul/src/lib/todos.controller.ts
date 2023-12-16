@@ -1,34 +1,36 @@
 import { TodosCommand } from '@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos';
+import { dispatchCommand } from '@nest-plus-io-ts-experiment/dispatch-command-in-todos';
 import {
   EncodedGetTodosResponse,
   GetTodosQuery,
   GetTodosResponse,
 } from '@nest-plus-io-ts-experiment/get-todos-contract-in-todos';
+import { getTodoLists } from '@nest-plus-io-ts-experiment/get-todos-in-todos';
 import { CodecPipe } from '@nest-plus-io-ts-experiment/io-ts-nest';
 import {
+  BadRequestException,
   Body,
   Controller,
   Get,
   NotFoundException,
   Post,
   Query,
-  BadRequestException,
 } from '@nestjs/common';
-import { TodosService } from './todos.service';
-import { absurd, pipe } from 'fp-ts/function';
-import * as TE from 'fp-ts/TaskEither';
 import * as T from 'fp-ts/Task';
+import * as TE from 'fp-ts/TaskEither';
+import { absurd, pipe } from 'fp-ts/function';
+import { TodosInMemoryRepository } from './todos.in-memory.repository';
 
 @Controller('todos')
 export class TodosController {
-  constructor(private readonly service: TodosService) {}
+  constructor(private readonly repository: TodosInMemoryRepository) {}
 
   @Post('commands')
   async dispatchCommand(
     @Body(new CodecPipe(TodosCommand)) data: TodosCommand
   ): Promise<void> {
     return pipe(
-      async () => this.service.dispatchCommand(data),
+      async () => dispatchCommand(this.repository)(data),
       TE.fold(
         (e) => async () => {
           switch (e._tag) {
@@ -54,7 +56,7 @@ export class TodosController {
   async getAll(
     @Query(new CodecPipe(GetTodosQuery)) query: GetTodosQuery
   ): Promise<EncodedGetTodosResponse> {
-    const todos = await this.service.getList(query);
+    const todos = await getTodoLists(this.repository)(query);
     return GetTodosResponse.encode(todos);
   }
 }
