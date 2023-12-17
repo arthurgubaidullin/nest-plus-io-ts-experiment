@@ -26,6 +26,9 @@
       "@nest-plus-io-ts-experiment/client-config": [
         "config/client/src/index.ts"
       ],
+      "@nest-plus-io-ts-experiment/client-service-config-in-todos": [
+        "todos/service/config/client/src/index.ts"
+      ],
       "@nest-plus-io-ts-experiment/client-service-in-todos": [
         "todos/service/client/src/index.ts"
       ],
