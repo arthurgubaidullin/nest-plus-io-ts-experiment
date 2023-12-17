@@ -1,4 +1,4 @@
-import { TodosCommand } from '@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos';
+import { DispatchCommandBody } from '@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos';
 import { dispatchCommand } from '@nest-plus-io-ts-experiment/dispatch-command-in-todos';
 import {
   GetTodo,
@@ -12,7 +12,7 @@ import { absurd, pipe } from 'fp-ts/function';
 
 export const dispatchCommandHandler =
   (repository: GetTodo & CreateTodo & UpdateTodo) =>
-  (data: TodosCommand): Promise<void> => {
+  (data: DispatchCommandBody): Promise<void> => {
     return pipe(
       dispatchCommand(repository)(data),
       TE.fold(

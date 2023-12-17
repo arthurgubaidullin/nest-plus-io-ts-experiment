@@ -3,7 +3,7 @@ import {
   changeTodoState,
 } from '@nest-plus-io-ts-experiment/change-todo-in-todos';
 import { createTodo } from '@nest-plus-io-ts-experiment/create-todo-in-todos';
-import { TodosCommand } from '@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos';
+import { DispatchCommandBody } from '@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos';
 import {
   CreateTodo,
   GetTodo,
@@ -18,7 +18,7 @@ import { absurd, pipe } from 'fp-ts/function';
 export const dispatchCommand =
   (repository: GetTodo & CreateTodo & UpdateTodo) =>
   (
-    command: TodosCommand
+    command: DispatchCommandBody
   ): TE.TaskEither<
     TodoAlreadyExists | NotFoundTodo | FailedToChangeTodo,
     void

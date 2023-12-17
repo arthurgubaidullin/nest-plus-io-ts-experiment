@@ -1,1 +1,1 @@
-export * from './lib/todos-command';
+export * from './lib/dispatch-command-body';

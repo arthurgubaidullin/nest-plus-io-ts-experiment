@@ -1,4 +1,4 @@
-import { TodosCommand } from '@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos';
+import { DispatchCommandBody } from '@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos';
 import { dispatchCommandHandler } from '@nest-plus-io-ts-experiment/dispatch-command-http-handler-in-todos';
 import {
   EncodedGetTodosResponse,
@@ -15,7 +15,7 @@ export class TodosController {
 
   @Post('commands')
   async dispatchCommand(
-    @Body(new CodecPipe(TodosCommand)) data: TodosCommand
+    @Body(new CodecPipe(DispatchCommandBody)) data: DispatchCommandBody
   ): Promise<void> {
     return dispatchCommandHandler(this.repository)(data);
   }
