@@ -3,13 +3,13 @@ import * as O from 'fp-ts/Option';
 import { identity, pipe } from 'fp-ts/function';
 import { createContext, useContext } from 'react';
 
-const TodosServiceContext = createContext<O.Option<TodosService>>(O.none);
+const TodosServerApiContext = createContext<O.Option<TodosService>>(O.none);
 
-export const TodosServiceProvider = TodosServiceContext.Provider;
+export const TodosServerApiProvider = TodosServerApiContext.Provider;
 
-export const useTodosService = () =>
+export const useTodosServerApi = () =>
   pipe(
-    useContext(TodosServiceContext),
+    useContext(TodosServerApiContext),
     O.fold(() => {
       throw new TypeError('Not found TodosServiceContext.');
     }, identity)

@@ -1,4 +1,4 @@
-import { useTodosService } from '@nest-plus-io-ts-experiment/server-api-context-in-todos';
+import { useTodosServerApi } from '@nest-plus-io-ts-experiment/server-api-context-in-todos';
 import { GetTodosResponse } from '@nest-plus-io-ts-experiment/get-todos-contract-in-todos';
 import { FailedToGetTodos } from '@nest-plus-io-ts-experiment/server-api-type-in-todos';
 import { useTodosStore } from '@nest-plus-io-ts-experiment/todos-store';
@@ -7,7 +7,7 @@ import * as TE from 'fp-ts/TaskEither';
 import { useEffect } from 'react';
 
 export function useTodos() {
-  const service = useTodosService();
+  const service = useTodosServerApi();
 
   const { todos, failure, pending, success } = useTodosStore();
 
