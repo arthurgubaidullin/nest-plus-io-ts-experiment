@@ -5,7 +5,7 @@
     "tslib": "^2.3.0",
     "@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos": "*",
     "fp-ts": "^2.16.1",
-    "@nest-plus-io-ts-experiment/service-type-in-todos": "*"
+    "@nest-plus-io-ts-experiment/server-api-type-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",

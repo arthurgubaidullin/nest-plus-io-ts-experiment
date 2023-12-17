@@ -1,6 +1,6 @@
 import * as RD from '@devexperts/remote-data-ts';
 import { GetTodosResponse } from '@nest-plus-io-ts-experiment/get-todos-contract-in-todos';
-import { FailedToGetTodos } from '@nest-plus-io-ts-experiment/service-type-in-todos';
+import { FailedToGetTodos } from '@nest-plus-io-ts-experiment/server-api-type-in-todos';
 import { create } from 'zustand';
 
 export interface TodosStoreApi {

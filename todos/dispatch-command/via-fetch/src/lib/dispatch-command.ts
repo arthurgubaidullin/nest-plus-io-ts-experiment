@@ -1,5 +1,5 @@
 import { TodosCommand } from '@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos';
-import { FailedToDispatchCommand } from '@nest-plus-io-ts-experiment/service-type-in-todos';
+import { FailedToDispatchCommand } from '@nest-plus-io-ts-experiment/server-api-type-in-todos';
 import * as E from 'fp-ts/Either';
 import * as TE from 'fp-ts/TaskEither';
 import { TaskEither } from 'fp-ts/TaskEither';

@@ -1,4 +1,4 @@
-import { useTodosService } from '@nest-plus-io-ts-experiment/client-service-context-in-todos';
+import { useTodosService } from '@nest-plus-io-ts-experiment/server-api-context-in-todos';
 import { NonEmptyString } from 'io-ts-types';
 
 export const NewTodoForm = () => {

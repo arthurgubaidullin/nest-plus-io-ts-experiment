@@ -1,5 +1,5 @@
-import { TodosServiceProvider } from '@nest-plus-io-ts-experiment/client-service-context-in-todos';
-import { getService as getTodosService } from '@nest-plus-io-ts-experiment/client-service-in-todos';
+import { TodosServiceProvider } from '@nest-plus-io-ts-experiment/server-api-context-in-todos';
+import { getService as getTodosService } from '@nest-plus-io-ts-experiment/server-api-in-todos';
 import * as O from 'fp-ts/Option';
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';

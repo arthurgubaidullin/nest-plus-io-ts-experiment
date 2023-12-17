@@ -1,12 +1,12 @@
 {
-  "name": "@nest-plus-io-ts-experiment/client-service-in-todos",
+  "name": "@nest-plus-io-ts-experiment/server-api-in-todos",
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",
     "@nest-plus-io-ts-experiment/get-todos-via-fetch-in-todos": "*",
-    "@nest-plus-io-ts-experiment/service-type-in-todos": "*",
     "@nest-plus-io-ts-experiment/dispatch-command-via-fetch-in-todos": "*",
-    "@nest-plus-io-ts-experiment/client-service-config-in-todos": "*"
+    "@nest-plus-io-ts-experiment/server-api-config-in-todos": "*",
+    "@nest-plus-io-ts-experiment/server-api-type-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",

@@ -1,5 +1,5 @@
 {
-  "name": "@nest-plus-io-ts-experiment/client-service-config-in-todos",
+  "name": "@nest-plus-io-ts-experiment/server-api-config-in-todos",
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0"

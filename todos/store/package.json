@@ -5,8 +5,8 @@
     "tslib": "^2.3.0",
     "@devexperts/remote-data-ts": "^2.1.1",
     "@nest-plus-io-ts-experiment/get-todos-contract-in-todos": "*",
-    "@nest-plus-io-ts-experiment/service-type-in-todos": "*",
-    "zustand": "^4.4.7"
+    "zustand": "^4.4.7",
+    "@nest-plus-io-ts-experiment/server-api-type-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",

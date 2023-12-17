@@ -1,16 +1,16 @@
 {
-  "name": "client-service-in-todos",
+  "name": "server-api-config-in-todos",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "todos/service/client/src",
+  "sourceRoot": "todos/server-api/config/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/todos/service/client",
-        "main": "todos/service/client/src/index.ts",
-        "tsConfig": "todos/service/client/tsconfig.lib.json",
+        "outputPath": "dist/todos/server-api/config",
+        "main": "todos/server-api/config/src/index.ts",
+        "tsConfig": "todos/server-api/config/tsconfig.lib.json",
         "assets": []
       }
     },
@@ -22,7 +22,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "todos/service/client/jest.config.ts"
+        "jestConfig": "todos/server-api/config/jest.config.ts"
       }
     }
   },

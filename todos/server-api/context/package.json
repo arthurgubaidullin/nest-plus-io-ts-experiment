@@ -1,11 +1,11 @@
 {
-  "name": "@nest-plus-io-ts-experiment/client-service-context-in-todos",
+  "name": "@nest-plus-io-ts-experiment/server-api-context-in-todos",
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",
-    "@nest-plus-io-ts-experiment/service-type-in-todos": "*",
     "fp-ts": "^2.16.1",
-    "react": "18.2.0"
+    "react": "18.2.0",
+    "@nest-plus-io-ts-experiment/server-api-type-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",

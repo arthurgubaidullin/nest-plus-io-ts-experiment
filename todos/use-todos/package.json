@@ -5,10 +5,10 @@
     "tslib": "^2.3.0",
     "fp-ts": "^2.16.1",
     "react": "18.2.0",
-    "@nest-plus-io-ts-experiment/client-service-context-in-todos": "*",
     "@nest-plus-io-ts-experiment/todos-store": "*",
     "@nest-plus-io-ts-experiment/get-todos-contract-in-todos": "*",
-    "@nest-plus-io-ts-experiment/service-type-in-todos": "*"
+    "@nest-plus-io-ts-experiment/server-api-context-in-todos": "*",
+    "@nest-plus-io-ts-experiment/server-api-type-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",
