@@ -6,7 +6,8 @@
     "fast-check": "^3.14.0",
     "@nest-plus-io-ts-experiment/non-empty-string-arb": "*",
     "io-ts": "^2.2.21",
-    "io-ts-types": "^0.5.19"
+    "io-ts-types": "^0.5.19",
+    "fp-ts": "^2.16.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",

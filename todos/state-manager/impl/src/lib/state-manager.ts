@@ -1,5 +1,6 @@
 import * as RD from '@devexperts/remote-data-ts';
 import { ChangeTodoStateCommand } from '@nest-plus-io-ts-experiment/change-todo-command-in-todos';
+import { createCreateTodoCommand } from '@nest-plus-io-ts-experiment/create-todo-command-in-todos';
 import { TodosServerApi } from '@nest-plus-io-ts-experiment/server-api-type-in-todos';
 import { TodosStateManager } from '@nest-plus-io-ts-experiment/state-manager-type-in-todos';
 import { useTodosStore } from '@nest-plus-io-ts-experiment/todos-store';
@@ -46,10 +47,11 @@ export const getTodosStateManager = (
       const { todos } = useTodosStore();
       return todos;
     },
-    addTodo: async (command) =>
+    addTodo: async (data) =>
       pipe(
-        { _tag: 'CreateTodo' as const, ...command },
-        api.dispatch,
+        createCreateTodoCommand(data),
+        TE.fromOption(() => 'Invalid CreateTodoCommand.' as const),
+        TE.chainW(api.dispatch),
         TE.fold(
           (e) =>
             T.fromIO(() => {

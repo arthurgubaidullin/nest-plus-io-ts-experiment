@@ -1,5 +1,5 @@
 import { RemoteData } from '@devexperts/remote-data-ts';
-import { CreateTodoCommand } from '@nest-plus-io-ts-experiment/create-todo-command-in-todos';
+import { CreateTodoCommandData } from '@nest-plus-io-ts-experiment/create-todo-command-in-todos';
 import { GetTodosResponse } from '@nest-plus-io-ts-experiment/get-todos-contract-in-todos';
 import { FailedToGetTodos } from '@nest-plus-io-ts-experiment/server-api-type-in-todos';
 import { NonEmptyString } from 'io-ts-types';
@@ -13,7 +13,7 @@ export interface GetTodos {
 }
 
 export interface AddTodo {
-  readonly addTodo: (dto: Omit<CreateTodoCommand, '_tag'>) => Promise<void>;
+  readonly addTodo: (data: CreateTodoCommandData) => Promise<void>;
 }
 
 export interface ToggleTodo {

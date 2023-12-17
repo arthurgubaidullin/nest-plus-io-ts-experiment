@@ -17,12 +17,14 @@ export const CreateTodoCommand = t.readonly(
   'CreateTodoCommand'
 );
 
+export type CreateTodoCommandData = Readonly<{
+  id: string;
+  content: string;
+  createdAt: Date;
+}>;
+
 export const createCreateTodoCommand = (
-  data: Readonly<{
-    id: string;
-    content: string;
-    createdAt: Date;
-  }>
+  data: CreateTodoCommandData
 ): O.Option<CreateTodoCommand> =>
   pipe(
     O.Do,
