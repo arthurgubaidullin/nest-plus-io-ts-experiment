@@ -61,7 +61,7 @@
         "strings/non-empty-string-arb/src/index.ts"
       ],
       "@nest-plus-io-ts-experiment/repository-type-in-todos": [
-        "todos/repository-type/src/index.ts"
+        "todos/repository/type/src/index.ts"
       ],
       "@nest-plus-io-ts-experiment/todo-dpo-in-todos": [
         "todos/todo-dpo/src/index.ts"

@@ -1,16 +1,16 @@
 {
   "name": "repository-type-in-todos",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "todos/repository-type/src",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "todos/repository/type/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/todos/repository-type",
-        "main": "todos/repository-type/src/index.ts",
-        "tsConfig": "todos/repository-type/tsconfig.lib.json",
+        "outputPath": "dist/todos/repository/type",
+        "main": "todos/repository/type/src/index.ts",
+        "tsConfig": "todos/repository/type/tsconfig.lib.json",
         "assets": []
       }
     },
@@ -22,7 +22,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "todos/repository-type/jest.config.ts"
+        "jestConfig": "todos/repository/type/jest.config.ts"
       }
     }
   },
