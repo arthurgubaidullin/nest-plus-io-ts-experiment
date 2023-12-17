@@ -7,7 +7,7 @@ const TodosServiceContext = createContext<O.Option<TodosService>>(O.none);
 
 export const TodosServiceProvider = TodosServiceContext.Provider;
 
-export const useTodosServiceContext = () =>
+export const useTodosService = () =>
   pipe(
     useContext(TodosServiceContext),
     O.fold(() => {
