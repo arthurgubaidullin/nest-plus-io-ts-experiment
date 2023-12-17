@@ -12,10 +12,11 @@
   "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "sudo chown node node_modules tmp; npm install",
+  "postCreateCommand": "sudo chown node node_modules tmp dist; npm install",
 
   "mounts": [
     "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+    "source=${localWorkspaceFolderBasename}-dist,target=${containerWorkspaceFolder}/dist,type=volume",
     "source=${localWorkspaceFolderBasename}-tmp,target=${containerWorkspaceFolder}/tmp,type=volume"
   ],
 
