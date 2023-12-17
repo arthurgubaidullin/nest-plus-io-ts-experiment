@@ -4,24 +4,27 @@ import { NonEmptyString } from 'io-ts-types';
 export const NewTodoForm = () => {
   const service = useTodosServiceContext();
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
+    <>
+      <h2>New todo</h2>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
 
-        const fd = new FormData(e.currentTarget);
+          const fd = new FormData(e.currentTarget);
 
-        service.dispatch({
-          _tag: 'CreateTodo',
-          content: fd.get('content') as NonEmptyString,
-          createdAt: new Date(),
-          id: crypto.randomUUID() as NonEmptyString,
-        });
-      }}
-    >
-      <label>
-        Todo: <input type="text" name="content" required />
-      </label>
-      <input type="submit" />
-    </form>
+          service.dispatch({
+            _tag: 'CreateTodo',
+            content: fd.get('content') as NonEmptyString,
+            createdAt: new Date(),
+            id: crypto.randomUUID() as NonEmptyString,
+          });
+        }}
+      >
+        <label>
+          Todo: <input type="text" name="content" required />
+        </label>
+        <input type="submit" />
+      </form>
+    </>
   );
 };
