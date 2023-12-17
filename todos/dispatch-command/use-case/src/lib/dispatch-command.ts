@@ -16,7 +16,7 @@ import * as TE from 'fp-ts/TaskEither';
 import { absurd, pipe } from 'fp-ts/function';
 
 export const dispatchCommand =
-  (repo: GetTodo & CreateTodo & UpdateTodo) =>
+  (repository: GetTodo & CreateTodo & UpdateTodo) =>
   (
     command: TodosCommand
   ): TE.TaskEither<
@@ -25,11 +25,11 @@ export const dispatchCommand =
   > => {
     switch (command._tag) {
       case 'CreateTodo':
-        return pipe(createTodo(repo)(command.value));
+        return pipe(createTodo(repository)(command.value));
       case 'ChangeTodoContent':
-        return async () => changeTodoContent(repo)(command.value);
+        return changeTodoContent(repository)(command.value);
       case 'ChangeTodoState':
-        return async () => changeTodoState(repo)(command.value);
+        return changeTodoState(repository)(command.value);
 
       default:
         absurd(command);
