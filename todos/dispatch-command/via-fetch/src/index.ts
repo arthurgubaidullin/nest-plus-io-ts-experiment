@@ -1,1 +1,1 @@
-export * from './lib/dispatch-command-via-fetch-in-todos';
+export * from './lib/dispatch-command';
