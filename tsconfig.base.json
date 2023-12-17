@@ -78,6 +78,9 @@
       "@nest-plus-io-ts-experiment/server-api-type-in-todos": [
         "todos/server-api/type/src/index.ts"
       ],
+      "@nest-plus-io-ts-experiment/state-manager-in-todos": [
+        "todos/state-manager/impl/src/index.ts"
+      ],
       "@nest-plus-io-ts-experiment/todo-dpo-in-todos": [
         "todos/todo-dpo/src/index.ts"
       ],
