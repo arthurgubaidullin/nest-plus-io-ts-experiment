@@ -3,10 +3,8 @@
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",
-    "fast-check": "^3.14.0",
     "io-ts": "^2.2.21",
-    "io-ts-types": "^0.5.19",
-    "@nest-plus-io-ts-experiment/non-empty-string-arb": "*"
+    "@nest-plus-io-ts-experiment/create-todo-command-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",

@@ -7,7 +7,7 @@
     "@devexperts/remote-data-ts": "^2.1.1",
     "@nest-plus-io-ts-experiment/get-todos-contract-in-todos": "*",
     "@nest-plus-io-ts-experiment/server-api-type-in-todos": "*",
-    "@nest-plus-io-ts-experiment/create-todo-contract-in-todos": "*"
+    "@nest-plus-io-ts-experiment/create-todo-command-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",

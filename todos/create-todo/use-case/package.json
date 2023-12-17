@@ -5,8 +5,8 @@
     "tslib": "^2.3.0",
     "@nest-plus-io-ts-experiment/repository-type-in-todos": "*",
     "@nest-plus-io-ts-experiment/todo-in-todos": "*",
-    "@nest-plus-io-ts-experiment/create-todo-contract-in-todos": "*",
-    "fp-ts": "^2.16.1"
+    "fp-ts": "^2.16.1",
+    "@nest-plus-io-ts-experiment/create-todo-command-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",

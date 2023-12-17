@@ -4,8 +4,8 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "@nest-plus-io-ts-experiment/change-todo-contract-in-todos": "*",
-    "@nest-plus-io-ts-experiment/create-todo-contract-in-todos": "*",
-    "io-ts": "^2.2.21"
+    "io-ts": "^2.2.21",
+    "@nest-plus-io-ts-experiment/create-todo-command-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",
