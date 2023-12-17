@@ -2,7 +2,11 @@
   "name": "@nest-plus-io-ts-experiment/state-manager-in-todos",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@nest-plus-io-ts-experiment/server-api-type-in-todos": "*",
+    "@nest-plus-io-ts-experiment/state-manager-type-in-todos": "*",
+    "@nest-plus-io-ts-experiment/todos-store": "*",
+    "fp-ts": "^2.16.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",
