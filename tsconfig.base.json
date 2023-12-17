@@ -26,9 +26,6 @@
       "@nest-plus-io-ts-experiment/create-todo-command-in-todos": [
         "todos/data-objects/create-todo-command/src/index.ts"
       ],
-      "@nest-plus-io-ts-experiment/create-todo-contract-in-todos": [
-        "todos/create-todo/contract/src/index.ts"
-      ],
       "@nest-plus-io-ts-experiment/create-todo-in-todos": [
         "todos/create-todo/use-case/src/index.ts"
       ],
