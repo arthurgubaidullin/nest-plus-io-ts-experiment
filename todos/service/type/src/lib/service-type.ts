@@ -1,3 +1,4 @@
-export function serviceTypeInTodos(): string {
-  return 'service-type-in-todos';
-}
+import { DispatchCommand } from './dispatch-command';
+import { GetTodoList } from './get-todo-list';
+
+export type TodosService = DispatchCommand & GetTodoList;
