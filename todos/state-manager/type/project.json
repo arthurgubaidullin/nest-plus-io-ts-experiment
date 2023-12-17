@@ -1,0 +1,30 @@
+{
+  "name": "state-manager-type-in-todos",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "todos/state-manager/type/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/todos/state-manager/type",
+        "main": "todos/state-manager/type/src/index.ts",
+        "tsConfig": "todos/state-manager/type/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "todos/state-manager/type/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
