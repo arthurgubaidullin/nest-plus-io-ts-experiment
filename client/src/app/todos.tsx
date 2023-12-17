@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { NewTodoForm } from './new-todo-form';
 
 export const TodoList = () => {
-  const { useTodos, getTodos } = useTodosStateManager();
+  const { useTodos, getTodos, toggleTodo } = useTodosStateManager();
   const todos = useTodos();
 
   useEffect(() => {
@@ -28,6 +28,7 @@ export const TodoList = () => {
             {todos.map((todo) => (
               <li key={todo.id}>
                 <input
+                  onChange={() => toggleTodo(todo.id)}
                   type="checkbox"
                   defaultChecked={todo.state === 'COMPLETED'}
                 />{' '}
