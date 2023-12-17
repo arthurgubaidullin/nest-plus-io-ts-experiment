@@ -7,7 +7,7 @@ const TodosServerApiContext = createContext<O.Option<TodosService>>(O.none);
 
 export const TodosServerApiProvider = TodosServerApiContext.Provider;
 
-export const useTodosServerApi = () =>
+export const useTodosServerApi = (): TodosService =>
   pipe(
     useContext(TodosServerApiContext),
     O.fold(() => {
