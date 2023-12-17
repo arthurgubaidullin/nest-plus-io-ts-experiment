@@ -1,0 +1,30 @@
+{
+  "name": "create-todo-command-in-todos",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "todos/data-objects/create-todo-command/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/todos/data-objects/create-todo-command",
+        "main": "todos/data-objects/create-todo-command/src/index.ts",
+        "tsConfig": "todos/data-objects/create-todo-command/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "todos/data-objects/create-todo-command/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
