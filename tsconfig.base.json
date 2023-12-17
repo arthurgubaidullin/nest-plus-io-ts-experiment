@@ -26,6 +26,9 @@
       "@nest-plus-io-ts-experiment/client-config": [
         "config/client/src/index.ts"
       ],
+      "@nest-plus-io-ts-experiment/client-service-in-todos": [
+        "todos/service/client/src/index.ts"
+      ],
       "@nest-plus-io-ts-experiment/create-todo-contract-in-todos": [
         "todos/create-todo/contract/src/index.ts"
       ],
@@ -53,6 +56,9 @@
       "@nest-plus-io-ts-experiment/get-todos-via-fetch-in-todos": [
         "todos/get-todos/via-fetch/src/index.ts"
       ],
+      "@nest-plus-io-ts-experiment/in-memory-repository-in-todos": [
+        "todos/repository/in-memory/src/index.ts"
+      ],
       "@nest-plus-io-ts-experiment/io-ts-nest": ["io-ts-nest/src/index.ts"],
       "@nest-plus-io-ts-experiment/modul-in-todos": [
         "todos/modul/src/index.ts"
@@ -73,9 +79,6 @@
         "todos/todo-dto/src/index.ts"
       ],
       "@nest-plus-io-ts-experiment/todo-in-todos": ["todos/todo/src/index.ts"],
-      "@nest-plus-io-ts-experiment/in-memory-repository-in-todos": [
-        "todos/repository/in-memory/src/index.ts"
-      ],
       "@nest-plus-io-ts-experiment/use-todos-in-todos": [
         "todos/use-todos/src/index.ts"
       ]
