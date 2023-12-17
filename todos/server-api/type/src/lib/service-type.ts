@@ -1,4 +1,4 @@
 import { DispatchCommand } from './dispatch-command';
 import { GetTodoList } from './get-todo-list';
 
-export type TodosService = DispatchCommand & GetTodoList;
+export type TodosServerApi = DispatchCommand & GetTodoList;
