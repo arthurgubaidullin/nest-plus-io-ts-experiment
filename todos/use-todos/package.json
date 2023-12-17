@@ -8,7 +8,8 @@
     "@nest-plus-io-ts-experiment/get-todos-contract-in-todos": "*",
     "@nest-plus-io-ts-experiment/get-todos-via-fetch-in-todos": "*",
     "fp-ts": "^2.16.1",
-    "react": "18.2.0"
+    "react": "18.2.0",
+    "@nest-plus-io-ts-experiment/service-type-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",

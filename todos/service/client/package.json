@@ -4,7 +4,8 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "@nest-plus-io-ts-experiment/get-todos-via-fetch-in-todos": "*",
-    "@nest-plus-io-ts-experiment/service-type-in-todos": "*"
+    "@nest-plus-io-ts-experiment/service-type-in-todos": "*",
+    "@nest-plus-io-ts-experiment/dispatch-command-via-fetch-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",

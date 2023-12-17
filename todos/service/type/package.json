@@ -5,8 +5,7 @@
     "tslib": "^2.3.0",
     "fp-ts": "^2.16.1",
     "@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos": "*",
-    "@nest-plus-io-ts-experiment/get-todos-contract-in-todos": "*",
-    "@nest-plus-io-ts-experiment/get-todos-via-fetch-in-todos": "*"
+    "@nest-plus-io-ts-experiment/get-todos-contract-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",
