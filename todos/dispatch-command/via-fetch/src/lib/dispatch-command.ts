@@ -1,9 +1,9 @@
 import { TodosCommand } from '@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos';
+import { FailedToDispatchCommand } from '@nest-plus-io-ts-experiment/service-type-in-todos';
+import * as E from 'fp-ts/Either';
 import * as TE from 'fp-ts/TaskEither';
 import { TaskEither } from 'fp-ts/TaskEither';
 import { constVoid, pipe } from 'fp-ts/function';
-import { FailedToDispatchCommand } from './failed-to-dispatch-command';
-import * as E from 'fp-ts/Either';
 
 export const dispatchCommand =
   (config: Readonly<{ host: string }>) =>
