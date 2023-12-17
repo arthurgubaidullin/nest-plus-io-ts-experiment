@@ -78,5 +78,6 @@
         "linter": "eslint"
       }
     }
-  }
+  },
+  "cacheDirectory": "./tmp/nx-cache"
 }
