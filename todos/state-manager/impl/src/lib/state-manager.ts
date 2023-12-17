@@ -8,6 +8,10 @@ import * as TE from 'fp-ts/TaskEither';
 export const getTodosStateManager = (
   api: TodosServerApi
 ): TodosStateManager => ({
+  useTodos: () => {
+    const { todos } = useTodosStore();
+    return todos;
+  },
   getTodos: pipe(
     TE.fromIO(() => useTodosStore.getState().pending()),
     TE.chain(() => api.getList()),
