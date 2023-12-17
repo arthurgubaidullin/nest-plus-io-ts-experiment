@@ -1,1 +1,1 @@
-export * from './lib/state-manager-type-in-todos';
+export * from './lib/state-manager';
