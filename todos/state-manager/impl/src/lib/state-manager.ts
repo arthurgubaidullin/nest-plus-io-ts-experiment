@@ -1,5 +1,5 @@
 import * as RD from '@devexperts/remote-data-ts';
-import { ChangeTodoStateCommand } from '@nest-plus-io-ts-experiment/change-todo-contract-in-todos';
+import { ChangeTodoStateCommand } from '@nest-plus-io-ts-experiment/change-todo-command-in-todos';
 import { TodosServerApi } from '@nest-plus-io-ts-experiment/server-api-type-in-todos';
 import { TodosStateManager } from '@nest-plus-io-ts-experiment/state-manager-type-in-todos';
 import { useTodosStore } from '@nest-plus-io-ts-experiment/todos-store';

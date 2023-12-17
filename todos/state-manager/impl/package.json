@@ -8,7 +8,7 @@
     "@nest-plus-io-ts-experiment/todos-store": "*",
     "fp-ts": "^2.16.1",
     "@devexperts/remote-data-ts": "^2.1.1",
-    "@nest-plus-io-ts-experiment/change-todo-contract-in-todos": "*"
+    "@nest-plus-io-ts-experiment/change-todo-command-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",

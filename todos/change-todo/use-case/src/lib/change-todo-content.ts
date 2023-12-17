@@ -1,4 +1,4 @@
-import { ChangeTodoContentCommand } from '@nest-plus-io-ts-experiment/change-todo-contract-in-todos';
+import { ChangeTodoContentCommand } from '@nest-plus-io-ts-experiment/change-todo-command-in-todos';
 import {
   GetTodo,
   NotFoundTodo,

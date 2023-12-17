@@ -1,7 +1,7 @@
 import {
   ChangeTodoContentCommand,
   ChangeTodoStateCommand,
-} from '@nest-plus-io-ts-experiment/change-todo-contract-in-todos';
+} from '@nest-plus-io-ts-experiment/change-todo-command-in-todos';
 import { CreateTodoCommand } from '@nest-plus-io-ts-experiment/create-todo-command-in-todos';
 import * as t from 'io-ts';
 

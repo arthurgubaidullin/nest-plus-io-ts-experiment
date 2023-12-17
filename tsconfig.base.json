@@ -17,8 +17,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nest-plus-io-ts-experiment/change-todo-contract-in-todos": [
-        "todos/change-todo/contract/src/index.ts"
+      "@nest-plus-io-ts-experiment/change-todo-command-in-todos": [
+        "todos/data-objects/change-todo-command/src/index.ts"
       ],
       "@nest-plus-io-ts-experiment/change-todo-in-todos": [
         "todos/change-todo/use-case/src/index.ts"
