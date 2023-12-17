@@ -4,33 +4,32 @@ import {
   changeTodoState,
 } from '@nest-plus-io-ts-experiment/change-todo-in-todos';
 import { createTodo } from '@nest-plus-io-ts-experiment/create-todo-in-todos';
+import { TodosCommand } from '@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos';
 import {
   CreateTodo,
   GetTodo,
+  TodoAlreadyExists,
   UpdateTodo,
 } from '@nest-plus-io-ts-experiment/repository-type-in-todos';
 import { FailedToChangeTodo } from '@nest-plus-io-ts-experiment/todo-in-todos';
-import * as E from 'fp-ts/Either';
 import * as TE from 'fp-ts/TaskEither';
 import { absurd, pipe } from 'fp-ts/function';
-import { TodosCommand } from '@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos';
 
 export const dispatchCommand =
   (repo: GetTodo & CreateTodo & UpdateTodo) =>
   (
     command: TodosCommand
-  ): Promise<E.Either<NotFoundTodo | FailedToChangeTodo, void>> => {
+  ): TE.TaskEither<
+    TodoAlreadyExists | NotFoundTodo | FailedToChangeTodo,
+    void
+  > => {
     switch (command._tag) {
       case 'CreateTodo':
-        return pipe(
-          async () => createTodo(repo)(command.value),
-          TE.fromTask,
-          (t) => t()
-        );
+        return pipe(createTodo(repo)(command.value));
       case 'ChangeTodoContent':
-        return changeTodoContent(repo)(command.value);
+        return async () => changeTodoContent(repo)(command.value);
       case 'ChangeTodoState':
-        return changeTodoState(repo)(command.value);
+        return async () => changeTodoState(repo)(command.value);
 
       default:
         absurd(command);

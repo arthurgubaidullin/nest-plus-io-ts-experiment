@@ -4,6 +4,7 @@ import {
 } from '@nest-plus-io-ts-experiment/repository-type-in-todos';
 import { TodoDpo } from '@nest-plus-io-ts-experiment/todo-dpo-in-todos';
 import * as A from 'fp-ts/Array';
+import * as E from 'fp-ts/Either';
 import * as O from 'fp-ts/Option';
 import { constVoid, pipe } from 'fp-ts/function';
 import { NonEmptyString } from 'io-ts-types';
@@ -11,9 +12,10 @@ import { NonEmptyString } from 'io-ts-types';
 export class TodosInMemoryRepository implements TodosRepository {
   private readonly todos: TodoDpo[] = [];
 
-  async create(todo: TodoDpo): Promise<void> {
+  public readonly create = (todo: TodoDpo) => async () => {
     this.todos.push(todo);
-  }
+    return E.right(void 0);
+  };
 
   async get(todoId: NonEmptyString): Promise<O.Option<TodoDpo>> {
     return pipe(

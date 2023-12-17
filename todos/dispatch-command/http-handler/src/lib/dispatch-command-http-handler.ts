@@ -14,10 +14,12 @@ export const dispatchCommandHandler =
   (repository: GetTodo & CreateTodo & UpdateTodo) =>
   (data: TodosCommand): Promise<void> => {
     return pipe(
-      async () => dispatchCommand(repository)(data),
+      dispatchCommand(repository)(data),
       TE.fold(
         (e) => async () => {
           switch (e._tag) {
+            case 'TodoAlreadyExists':
+              throw new BadRequestException();
             case 'NotFoundTodo':
               throw new NotFoundException();
             case 'InvalidState':
