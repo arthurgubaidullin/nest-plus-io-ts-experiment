@@ -1,9 +1,8 @@
 import { ChangeTodoContentCommand } from '@nest-plus-io-ts-experiment/change-todo-contract-in-todos';
 import {
   GetTodo,
-  UpdateTodo,
   NotFoundTodo,
-  createNotFoundTodo,
+  UpdateTodo,
 } from '@nest-plus-io-ts-experiment/repository-type-in-todos';
 import * as Todo from '@nest-plus-io-ts-experiment/todo-in-todos';
 import * as E from 'fp-ts/Either';
@@ -16,8 +15,7 @@ export const changeTodoContent =
     data: ChangeTodoContentCommand
   ): Promise<E.Either<NotFoundTodo | Todo.FailedToChangeTodo, void>> =>
     pipe(
-      async () => await repository.get(data.id),
-      TE.fromTaskOption(() => createNotFoundTodo()),
+      repository.get(data.id),
       TE.map(Todo.fromDpo),
       TE.chainEitherKW(Todo.changeContent(data)),
       TE.chainTaskK((todo) => async () => await repository.update(todo)),

@@ -1,7 +1,8 @@
 import { TodoDpo } from '@nest-plus-io-ts-experiment/todo-dpo-in-todos';
+import { TaskEither } from 'fp-ts/TaskEither';
 import { NonEmptyString } from 'io-ts-types';
-import * as O from 'fp-ts/Option';
+import { NotFoundTodo } from './not-found-todo';
 
 export interface GetTodo {
-  readonly get: (todoId: NonEmptyString) => Promise<O.Option<TodoDpo>>;
+  readonly get: (todoId: NonEmptyString) => TaskEither<NotFoundTodo, TodoDpo>;
 }
