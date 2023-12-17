@@ -11,5 +11,6 @@ export const CreateTodoCommand = t.readonly(
     id: NonEmptyString,
     content: NonEmptyString,
     createdAt: DateFromISOString,
-  })
+  }),
+  'CreateTodoCommand'
 );

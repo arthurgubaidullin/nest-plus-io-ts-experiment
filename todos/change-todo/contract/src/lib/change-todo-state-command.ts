@@ -16,5 +16,6 @@ export const ChangeTodoStateCommand = t.readonly(
     id: NonEmptyString,
     state: State,
     updatedAt: DateFromISOString,
-  })
+  }),
+  'ChangeTodoStateCommand'
 );

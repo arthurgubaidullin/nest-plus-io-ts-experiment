@@ -9,8 +9,7 @@ export type TodosCommand = t.TypeOf<typeof TodosCommand>;
 
 export type EncodedTodosCommand = t.OutputOf<typeof TodosCommand>;
 
-export const TodosCommand = t.union([
-  CreateTodoCommand,
-  ChangeTodoContentCommand,
-  ChangeTodoStateCommand,
-]);
+export const TodosCommand = t.union(
+  [CreateTodoCommand, ChangeTodoContentCommand, ChangeTodoStateCommand],
+  'TodosCommand'
+);

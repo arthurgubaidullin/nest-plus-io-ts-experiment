@@ -14,5 +14,6 @@ export const ChangeTodoContentCommand = t.readonly(
     id: NonEmptyString,
     content: NonEmptyString,
     updatedAt: DateFromISOString,
-  })
+  }),
+  'ChangeTodoContentCommand'
 );
