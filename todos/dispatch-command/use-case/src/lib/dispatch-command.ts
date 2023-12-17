@@ -1,5 +1,4 @@
 import {
-  NotFoundTodo,
   changeTodoContent,
   changeTodoState,
 } from '@nest-plus-io-ts-experiment/change-todo-in-todos';
@@ -8,6 +7,7 @@ import { TodosCommand } from '@nest-plus-io-ts-experiment/dispatch-command-contr
 import {
   CreateTodo,
   GetTodo,
+  NotFoundTodo,
   TodoAlreadyExists,
   UpdateTodo,
 } from '@nest-plus-io-ts-experiment/repository-type-in-todos';
