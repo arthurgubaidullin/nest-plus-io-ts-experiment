@@ -12,12 +12,14 @@ export const NewTodoForm = () => {
 
           const fd = new FormData(e.currentTarget);
 
-          service.dispatch({
-            _tag: 'CreateTodo',
+          const command = {
+            _tag: 'CreateTodo' as const,
             content: fd.get('content') as NonEmptyString,
             createdAt: new Date(),
             id: crypto.randomUUID() as NonEmptyString,
-          });
+          };
+
+          service.dispatch(command)();
         }}
       >
         <label>
