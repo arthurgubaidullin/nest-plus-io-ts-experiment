@@ -1,5 +1,5 @@
-export class NotFoundTodo {
-  public readonly _tag = 'NotFoundTodo';
+export interface NotFoundTodo {
+  readonly _tag: 'NotFoundTodo';
 }
 
 export const createNotFoundTodo = (): NotFoundTodo => ({
