@@ -10,7 +10,7 @@
     "@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos": "*",
     "@nest-plus-io-ts-experiment/dispatch-command-http-handler-in-todos": "*",
     "@nest-plus-io-ts-experiment/get-todos-http-handler": "*",
-    "@nest-plus-io-ts-experiment/todos-in-memory-repository": "*"
+    "@nest-plus-io-ts-experiment/in-memory-repository-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",

@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'todos-in-memory-repository',
+  displayName: 'in-memory-repository-in-todos',
   preset: '../../../jest.preset.js',
   testEnvironment: 'node',
   transform: {

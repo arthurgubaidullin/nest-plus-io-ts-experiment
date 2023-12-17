@@ -1,5 +1,5 @@
 {
-  "name": "todos-in-memory-repository",
+  "name": "in-memory-repository-in-todos",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "todos/repository/in-memory/src",
   "projectType": "library",

@@ -73,7 +73,7 @@
         "todos/todo-dto/src/index.ts"
       ],
       "@nest-plus-io-ts-experiment/todo-in-todos": ["todos/todo/src/index.ts"],
-      "@nest-plus-io-ts-experiment/todos-in-memory-repository": [
+      "@nest-plus-io-ts-experiment/in-memory-repository-in-todos": [
         "todos/repository/in-memory/src/index.ts"
       ],
       "@nest-plus-io-ts-experiment/use-todos-in-todos": [
