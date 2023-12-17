@@ -13,7 +13,7 @@ export const getTodos = (data: {
     async () => fetch(`${data.host}/api/todos`),
     T.chain((resp) => async (): Promise<unknown> => resp.json()),
     TE.fromTask,
-    TE.chainEitherKW((data) =>
+    TE.chainEitherK((data) =>
       pipe(
         data,
         GetTodosResponse.decode,
