@@ -13,7 +13,7 @@ export const getTodosStateManager = (
       const { todos } = useTodosStore();
       return todos;
     },
-    addTodo: async (command) => {
+    addTodo: async (command) =>
       pipe(
         { _tag: 'CreateTodo' as const, ...command },
         api.dispatch,
@@ -26,9 +26,9 @@ export const getTodosStateManager = (
             T.fromIO(() => {
               manager.getTodos();
             })
-        )
-      );
-    },
+        ),
+        (t) => t()
+      ),
     getTodos: pipe(
       TE.fromIO(() => useTodosStore.getState().pending()),
       TE.chain(() => api.getList()),
