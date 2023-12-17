@@ -5,14 +5,12 @@
     "tslib": "^2.3.0",
     "@nestjs/common": "^10.0.2",
     "@nest-plus-io-ts-experiment/io-ts-nest": "*",
-    "@nest-plus-io-ts-experiment/todo-dpo-in-todos": "*",
     "@nest-plus-io-ts-experiment/repository-type-in-todos": "*",
     "@nest-plus-io-ts-experiment/get-todos-contract-in-todos": "*",
-    "fp-ts": "^2.16.1",
-    "io-ts-types": "^0.5.19",
     "@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos": "*",
     "@nest-plus-io-ts-experiment/dispatch-command-http-handler-in-todos": "*",
-    "@nest-plus-io-ts-experiment/get-todos-http-handler": "*"
+    "@nest-plus-io-ts-experiment/get-todos-http-handler": "*",
+    "@nest-plus-io-ts-experiment/todos-in-memory-repository": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",

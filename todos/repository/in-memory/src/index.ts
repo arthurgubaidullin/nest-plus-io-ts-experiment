@@ -1,1 +1,1 @@
-export * from './lib/todos-in-memory-repository';
+export * from './lib/in-memory-repository';
