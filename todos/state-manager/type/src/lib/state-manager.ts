@@ -20,4 +20,4 @@ export interface ToggleTodo {
   readonly toggleTodo: (todoId: NonEmptyString) => Promise<void>;
 }
 
-export type TodosStateManager = UseTodos & GetTodos & AddTodo;
+export type TodosStateManager = UseTodos & GetTodos & AddTodo & ToggleTodo;
