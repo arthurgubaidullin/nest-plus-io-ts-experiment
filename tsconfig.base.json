@@ -69,9 +69,6 @@
       "@nest-plus-io-ts-experiment/server-api-config-in-todos": [
         "todos/server-api/config/src/index.ts"
       ],
-      "@nest-plus-io-ts-experiment/server-api-context-in-todos": [
-        "todos/server-api/context/src/index.ts"
-      ],
       "@nest-plus-io-ts-experiment/server-api-in-todos": [
         "todos/server-api/impl/src/index.ts"
       ],
@@ -94,10 +91,7 @@
         "todos/todo-dto/src/index.ts"
       ],
       "@nest-plus-io-ts-experiment/todo-in-todos": ["todos/todo/src/index.ts"],
-      "@nest-plus-io-ts-experiment/todos-store": ["todos/store/src/index.ts"],
-      "@nest-plus-io-ts-experiment/use-todos-in-todos": [
-        "todos/use-todos/src/index.ts"
-      ]
+      "@nest-plus-io-ts-experiment/todos-store": ["todos/store/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
