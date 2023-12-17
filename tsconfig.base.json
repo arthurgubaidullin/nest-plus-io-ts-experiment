@@ -23,6 +23,9 @@
       "@nest-plus-io-ts-experiment/change-todo-in-todos": [
         "todos/change-todo/use-case/src/index.ts"
       ],
+      "@nest-plus-io-ts-experiment/command-in-todos": [
+        "todos/data-objects/command/src/index.ts"
+      ],
       "@nest-plus-io-ts-experiment/create-todo-command-in-todos": [
         "todos/data-objects/create-todo-command/src/index.ts"
       ],

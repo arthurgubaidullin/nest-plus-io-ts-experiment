@@ -1,0 +1,30 @@
+{
+  "name": "command-in-todos",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "todos/data-objects/command/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/todos/data-objects/command",
+        "main": "todos/data-objects/command/src/index.ts",
+        "tsConfig": "todos/data-objects/command/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "todos/data-objects/command/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["tier:use-case"]
+}
