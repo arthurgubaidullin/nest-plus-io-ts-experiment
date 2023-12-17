@@ -7,4 +7,4 @@ export type EncodedDispatchCommandResponse = t.OutputOf<
   typeof DispatchCommandResponse
 >;
 
-export const DispatchCommandResponse = getResponseCodec(t.null);
+export const DispatchCommandResponse = getResponseCodec(t.void);
