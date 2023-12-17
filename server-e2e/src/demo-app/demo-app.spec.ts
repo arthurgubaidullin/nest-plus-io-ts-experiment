@@ -5,11 +5,9 @@ describe('GET /api/todos', () => {
   it('should add todo', async () => {
     const createTodo = {
       _tag: 'CreateTodo',
-      value: {
-        id: 'test' + randomUUID(),
-        content: 'test',
-        createdAt: new Date().toISOString(),
-      },
+      id: 'test' + randomUUID(),
+      content: 'test',
+      createdAt: new Date().toISOString(),
     };
     const res = await axios.post(`/api/todos/commands`, createTodo);
 
@@ -27,11 +25,9 @@ describe('GET /api/todos', () => {
   it('should get all todo', async () => {
     const createTodo = {
       _tag: 'CreateTodo',
-      value: {
-        id: 'test' + randomUUID(),
-        content: 'test',
-        createdAt: new Date().toISOString(),
-      },
+      id: 'test' + randomUUID(),
+      content: 'test',
+      createdAt: new Date().toISOString(),
     };
     await axios.post(`/api/todos/commands`, createTodo);
 

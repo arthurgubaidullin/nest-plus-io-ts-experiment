@@ -10,6 +10,7 @@ export type EncodedChangeTodoContentCommand = t.OutputOf<
 
 export const ChangeTodoContentCommand = t.readonly(
   t.strict({
+    _tag: t.literal('ChangeTodoContent'),
     id: NonEmptyString,
     content: NonEmptyString,
     updatedAt: DateFromISOString,

@@ -25,11 +25,11 @@ export const dispatchCommand =
   > => {
     switch (command._tag) {
       case 'CreateTodo':
-        return pipe(createTodo(repository)(command.value));
+        return pipe(createTodo(repository)(command));
       case 'ChangeTodoContent':
-        return changeTodoContent(repository)(command.value);
+        return changeTodoContent(repository)(command);
       case 'ChangeTodoState':
-        return changeTodoState(repository)(command.value);
+        return changeTodoState(repository)(command);
 
       default:
         absurd(command);

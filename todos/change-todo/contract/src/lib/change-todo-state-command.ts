@@ -12,6 +12,7 @@ export type EncodedChangeTodoStateCommand = t.OutputOf<
 
 export const ChangeTodoStateCommand = t.readonly(
   t.strict({
+    _tag: t.literal('ChangeTodoState'),
     id: NonEmptyString,
     state: State,
     updatedAt: DateFromISOString,

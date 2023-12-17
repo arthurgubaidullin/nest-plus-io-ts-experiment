@@ -7,6 +7,7 @@ export type EncodedCreateTodoCommand = t.OutputOf<typeof CreateTodoCommand>;
 
 export const CreateTodoCommand = t.readonly(
   t.strict({
+    _tag: t.literal('CreateTodo'),
     id: NonEmptyString,
     content: NonEmptyString,
     createdAt: DateFromISOString,
