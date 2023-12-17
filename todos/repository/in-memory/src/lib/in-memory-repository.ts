@@ -46,13 +46,15 @@ export class TodosInMemoryRepository implements TodosRepository {
     );
   }
 
-  async getList(
-    data?: Readonly<{ filters?: Filters }>
-  ): Promise<readonly TodoDpo[]> {
-    let todos = this.todos;
-    if (data?.filters?.completed) {
-      todos = todos.filter((todo) => todo.state === 'COMPLETED');
-    }
-    return todos;
-  }
+  public readonly getList =
+    (
+      data?: Readonly<{ filters?: Filters }>
+    ): TE.TaskEither<never, readonly TodoDpo[]> =>
+    async () => {
+      let todos = this.todos;
+      if (data?.filters?.completed) {
+        todos = todos.filter((todo) => todo.state === 'COMPLETED');
+      }
+      return E.right(todos);
+    };
 }

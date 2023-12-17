@@ -3,11 +3,12 @@ import {
   GetTodoList,
 } from '@nest-plus-io-ts-experiment/repository-type-in-todos';
 import { TodoDto } from '@nest-plus-io-ts-experiment/todo-dto-in-todos';
+import { TaskEither } from 'fp-ts/TaskEither';
 
 export const getTodoLists =
   (repository: GetTodoList) =>
-  async (
+  (
     data?: Readonly<{ filters?: Filters }>
-  ): Promise<readonly TodoDto[]> => {
-    return await repository.getList(data);
+  ): TaskEither<never, readonly TodoDto[]> => {
+    return repository.getList(data);
   };
