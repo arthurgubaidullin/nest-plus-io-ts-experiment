@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",
-    "@devexperts/remote-data-ts": "^2.1.1",
-    "@nest-plus-io-ts-experiment/get-todos-contract-in-todos": "*",
     "fp-ts": "^2.16.1",
     "react": "18.2.0",
-    "@nest-plus-io-ts-experiment/service-type-in-todos": "*",
-    "@nest-plus-io-ts-experiment/client-service-context-in-todos": "*"
+    "@nest-plus-io-ts-experiment/client-service-context-in-todos": "*",
+    "@nest-plus-io-ts-experiment/todos-store": "*",
+    "@nest-plus-io-ts-experiment/get-todos-contract-in-todos": "*",
+    "@nest-plus-io-ts-experiment/service-type-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",
