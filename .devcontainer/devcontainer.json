@@ -27,7 +27,8 @@
         "EditorConfig.EditorConfig",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "nrwl.angular-console"
+        "nrwl.angular-console",
+        "firsttris.vscode-jest-runner"
       ]
     }
   },
