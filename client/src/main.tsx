@@ -1,5 +1,5 @@
 import { TodosServiceProvider } from '@nest-plus-io-ts-experiment/server-api-context-in-todos';
-import { getService as getTodosService } from '@nest-plus-io-ts-experiment/server-api-in-todos';
+import { getServerApi } from '@nest-plus-io-ts-experiment/server-api-in-todos';
 import * as O from 'fp-ts/Option';
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <StrictMode>
     <TodosServiceProvider
-      value={O.some(getTodosService({ host: '//localhost:3000' }))}
+      value={O.some(getServerApi({ host: '//localhost:3000' }))}
     >
       <BrowserRouter>
         <App />

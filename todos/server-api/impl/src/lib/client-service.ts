@@ -3,7 +3,7 @@ import { dispatchCommand } from '@nest-plus-io-ts-experiment/dispatch-command-vi
 import { getTodos } from '@nest-plus-io-ts-experiment/get-todos-via-fetch-in-todos';
 import { TodosService } from '@nest-plus-io-ts-experiment/server-api-type-in-todos';
 
-export const getService = (config: TodosServiceConfig): TodosService => {
+export const getServerApi = (config: TodosServiceConfig): TodosService => {
   return {
     dispatch: dispatchCommand(config),
     getList: () => getTodos(config),
