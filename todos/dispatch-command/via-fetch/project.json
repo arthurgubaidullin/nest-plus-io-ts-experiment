@@ -1,0 +1,30 @@
+{
+  "name": "dispatch-command-via-fetch-in-todos",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "todos/dispatch-command/via-fetch/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/todos/dispatch-command/via-fetch",
+        "main": "todos/dispatch-command/via-fetch/src/index.ts",
+        "tsConfig": "todos/dispatch-command/via-fetch/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "todos/dispatch-command/via-fetch/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["tier:api"]
+}

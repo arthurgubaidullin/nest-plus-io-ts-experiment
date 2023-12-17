@@ -44,6 +44,9 @@
       "@nest-plus-io-ts-experiment/dispatch-command-in-todos": [
         "todos/dispatch-command/use-case/src/index.ts"
       ],
+      "@nest-plus-io-ts-experiment/dispatch-command-via-fetch-in-todos": [
+        "todos/dispatch-command/via-fetch/src/index.ts"
+      ],
       "@nest-plus-io-ts-experiment/get-todos-contract-in-todos": [
         "todos/get-todos/contract/src/index.ts"
       ],
