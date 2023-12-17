@@ -23,9 +23,6 @@
       "@nest-plus-io-ts-experiment/change-todo-in-todos": [
         "todos/change-todo/use-case/src/index.ts"
       ],
-      "@nest-plus-io-ts-experiment/client-config": [
-        "config/client/src/index.ts"
-      ],
       "@nest-plus-io-ts-experiment/client-service-config-in-todos": [
         "todos/service/config/client/src/index.ts"
       ],
