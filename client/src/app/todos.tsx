@@ -1,10 +1,17 @@
 import { fold3 } from '@devexperts/remote-data-ts';
-import { useTodos } from '@nest-plus-io-ts-experiment/use-todos-in-todos';
+import { useTodosStateManager } from '@nest-plus-io-ts-experiment/state-manager-context-in-todos';
 import { pipe } from 'fp-ts/function';
+import { useEffect } from 'react';
 import { NewTodoForm } from './new-todo-form';
 
 export const TodoList = () => {
+  const { useTodos, getTodos } = useTodosStateManager();
   const todos = useTodos();
+
+  useEffect(() => {
+    getTodos();
+  }, [getTodos]);
+
   return pipe(
     todos,
     fold3(
