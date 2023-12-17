@@ -85,7 +85,7 @@
         "todos/state-manager/type/src/index.ts"
       ],
       "@nest-plus-io-ts-experiment/todo-dpo-in-todos": [
-        "todos/todo-dpo/src/index.ts"
+        "todos/data-objects/todo-dpo/src/index.ts"
       ],
       "@nest-plus-io-ts-experiment/todo-dto-in-todos": [
         "todos/data-objects/todo-dto/src/index.ts"

@@ -1,16 +1,16 @@
 {
   "name": "todo-dpo-in-todos",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "todos/todo-dpo/src",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "todos/data-objects/todo-dpo/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/todos/todo-dpo",
-        "main": "todos/todo-dpo/src/index.ts",
-        "tsConfig": "todos/todo-dpo/tsconfig.lib.json",
+        "outputPath": "dist/todos/data-objects/todo-dpo",
+        "main": "todos/data-objects/todo-dpo/src/index.ts",
+        "tsConfig": "todos/data-objects/todo-dpo/tsconfig.lib.json",
         "assets": []
       }
     },
@@ -22,7 +22,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "todos/todo-dpo/jest.config.ts"
+        "jestConfig": "todos/data-objects/todo-dpo/jest.config.ts"
       }
     }
   },
