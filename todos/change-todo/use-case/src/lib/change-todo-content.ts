@@ -17,5 +17,5 @@ export const changeTodoContent =
       repository.get(data.id),
       TE.map(Todo.fromDpo),
       TE.chainEitherKW(Todo.changeContent(data)),
-      TE.chainTaskK((todo) => async () => await repository.update(todo))
+      TE.chainW((todo) => repository.update(todo))
     );

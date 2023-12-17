@@ -9,8 +9,8 @@ import { TodoDpo } from '@nest-plus-io-ts-experiment/todo-dpo-in-todos';
 import * as A from 'fp-ts/Array';
 import * as E from 'fp-ts/Either';
 import * as O from 'fp-ts/Option';
-import { constVoid, pipe } from 'fp-ts/function';
 import * as TE from 'fp-ts/TaskEither';
+import { pipe } from 'fp-ts/function';
 import { NonEmptyString } from 'io-ts-types';
 
 export class TodosInMemoryRepository implements TodosRepository {
@@ -35,16 +35,18 @@ export class TodosInMemoryRepository implements TodosRepository {
       );
     };
 
-  async update(todo: TodoDpo): Promise<void> {
-    return pipe(
-      this.todos,
-      A.findIndex((a) => a.id === todo.id),
-      O.map((i) => {
-        this.todos[i] = todo;
-      }),
-      O.getOrElse(constVoid)
-    );
-  }
+  public readonly update =
+    (todo: TodoDpo): TE.TaskEither<NotFoundTodo, void> =>
+    async () => {
+      return pipe(
+        this.todos,
+        A.findIndex((a) => a.id === todo.id),
+        O.map((i) => {
+          this.todos[i] = todo;
+        }),
+        E.fromOption(createNotFoundTodo)
+      );
+    };
 
   public readonly getList =
     (
