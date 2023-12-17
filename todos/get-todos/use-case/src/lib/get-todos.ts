@@ -1,14 +1,12 @@
 import {
-  Filters,
-  GetTodoList,
-} from '@nest-plus-io-ts-experiment/repository-type-in-todos';
-import { TodoDto } from '@nest-plus-io-ts-experiment/todo-dto-in-todos';
+  GetTodosQuery,
+  GetTodosResponse,
+} from '@nest-plus-io-ts-experiment/get-todos-contract-in-todos';
+import { GetTodoList } from '@nest-plus-io-ts-experiment/repository-type-in-todos';
 import { TaskEither } from 'fp-ts/TaskEither';
 
 export const getTodoLists =
   (repository: GetTodoList) =>
-  (
-    data?: Readonly<{ filters?: Filters }>
-  ): TaskEither<never, readonly TodoDto[]> => {
+  (data?: GetTodosQuery): TaskEither<never, GetTodosResponse> => {
     return repository.getList(data);
   };
