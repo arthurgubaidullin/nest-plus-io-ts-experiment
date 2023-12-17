@@ -24,7 +24,7 @@ export const getTodosStateManager = (
             ({
               _tag: 'ChangeTodoState' as const,
               id: todoId,
-              state: a.state,
+              state: a.state === 'IN_PROGRESS' ? 'COMPLETED' : 'IN_PROGRESS',
               updatedAt: new Date(),
             } satisfies ChangeTodoStateCommand)
         ),

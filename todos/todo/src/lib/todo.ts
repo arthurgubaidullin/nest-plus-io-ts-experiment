@@ -85,7 +85,7 @@ export const changeState =
       E.bindW('updatedAt', () => pipe(todo, UpdatedAt.change(data))),
       E.chainW(
         E.fromPredicate(
-          () => todo.state === data.state,
+          () => todo.state !== data.state,
           () => new InvalidState()
         )
       ),
