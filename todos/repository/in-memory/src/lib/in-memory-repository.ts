@@ -1,6 +1,7 @@
 import {
   Filters,
   TodosRepository,
+  createTodoAlreadyExists,
 } from '@nest-plus-io-ts-experiment/repository-type-in-todos';
 import { TodoDpo } from '@nest-plus-io-ts-experiment/todo-dpo-in-todos';
 import * as A from 'fp-ts/Array';
@@ -13,6 +14,10 @@ export class TodosInMemoryRepository implements TodosRepository {
   private readonly todos: TodoDpo[] = [];
 
   public readonly create = (todo: TodoDpo) => async () => {
+    if (this.todos.find((_todo) => _todo.id === todo.id)) {
+      return E.left(createTodoAlreadyExists());
+    }
+
     this.todos.push(todo);
     return E.right(void 0);
   };
