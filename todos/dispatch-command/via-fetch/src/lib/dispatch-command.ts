@@ -12,6 +12,9 @@ export const dispatchCommand =
       async () =>
         fetch(`${config.host}/api/todos/commands`, {
           method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
           body: JSON.stringify(TodosCommand.encode(data)),
         }),
       (f) => TE.tryCatch(f, E.toError),
