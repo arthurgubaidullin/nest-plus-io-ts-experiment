@@ -69,6 +69,9 @@
       "@nest-plus-io-ts-experiment/repository-type-in-todos": [
         "todos/repository/type/src/index.ts"
       ],
+      "@nest-plus-io-ts-experiment/response-in-todos": [
+        "todos/data-objects/response/src/index.ts"
+      ],
       "@nest-plus-io-ts-experiment/server-api-config-in-todos": [
         "todos/server-api/config/src/index.ts"
       ],
