@@ -1,1 +1,1 @@
-export * from './lib/command-in-todos';
+export * from './lib/todos-command';

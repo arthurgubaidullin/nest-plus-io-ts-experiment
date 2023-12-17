@@ -1,5 +1,5 @@
+import { TodosCommand } from '@nest-plus-io-ts-experiment/command-in-todos';
 import * as t from 'io-ts';
-import { TodosCommand } from './todos-command';
 
 export type DispatchCommandBody = t.TypeOf<typeof DispatchCommandBody>;
 

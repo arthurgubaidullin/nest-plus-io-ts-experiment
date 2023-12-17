@@ -2,7 +2,10 @@
   "name": "@nest-plus-io-ts-experiment/command-in-todos",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@nest-plus-io-ts-experiment/change-todo-command-in-todos": "*",
+    "@nest-plus-io-ts-experiment/create-todo-command-in-todos": "*",
+    "io-ts": "^2.2.21"
   },
   "type": "commonjs",
   "main": "./src/index.js",

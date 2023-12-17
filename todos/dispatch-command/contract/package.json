@@ -4,8 +4,7 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "io-ts": "^2.2.21",
-    "@nest-plus-io-ts-experiment/create-todo-command-in-todos": "*",
-    "@nest-plus-io-ts-experiment/change-todo-command-in-todos": "*"
+    "@nest-plus-io-ts-experiment/command-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",
