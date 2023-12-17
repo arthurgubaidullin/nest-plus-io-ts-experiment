@@ -1,8 +1,8 @@
-import { useTodosServerApi } from '@nest-plus-io-ts-experiment/server-api-context-in-todos';
+import { useTodosStateManager } from '@nest-plus-io-ts-experiment/state-manager-context-in-todos';
 import { NonEmptyString } from 'io-ts-types';
 
 export const NewTodoForm = () => {
-  const service = useTodosServerApi();
+  const { addTodo } = useTodosStateManager();
   return (
     <>
       <h2>New todo</h2>
@@ -19,7 +19,7 @@ export const NewTodoForm = () => {
             id: crypto.randomUUID() as NonEmptyString,
           };
 
-          service.dispatch(command)();
+          addTodo(command);
         }}
       >
         <label>

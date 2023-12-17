@@ -3,11 +3,11 @@
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",
-    "@nest-plus-io-ts-experiment/todo-dto-in-todos": "*",
     "io-ts-types": "^0.5.19",
     "@devexperts/remote-data-ts": "^2.1.1",
     "@nest-plus-io-ts-experiment/get-todos-contract-in-todos": "*",
-    "@nest-plus-io-ts-experiment/server-api-type-in-todos": "*"
+    "@nest-plus-io-ts-experiment/server-api-type-in-todos": "*",
+    "@nest-plus-io-ts-experiment/create-todo-contract-in-todos": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",
