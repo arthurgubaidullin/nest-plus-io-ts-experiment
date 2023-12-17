@@ -1,8 +1,12 @@
-import { DispatchCommandBody } from '@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos';
+import {
+  DispatchCommandBody,
+  DispatchCommandResponse,
+  EncodedDispatchCommandResponse,
+} from '@nest-plus-io-ts-experiment/dispatch-command-contract-in-todos';
 import { dispatchCommand } from '@nest-plus-io-ts-experiment/dispatch-command-in-todos';
 import {
-  GetTodo,
   CreateTodo,
+  GetTodo,
   UpdateTodo,
 } from '@nest-plus-io-ts-experiment/repository-type-in-todos';
 import { BadRequestException, NotFoundException } from '@nestjs/common';
@@ -12,7 +16,7 @@ import { absurd, pipe } from 'fp-ts/function';
 
 export const dispatchCommandHandler =
   (repository: GetTodo & CreateTodo & UpdateTodo) =>
-  (data: DispatchCommandBody): Promise<void> => {
+  (data: DispatchCommandBody): Promise<EncodedDispatchCommandResponse> => {
     return pipe(
       dispatchCommand(repository)(data),
       TE.fold(
@@ -34,6 +38,7 @@ export const dispatchCommandHandler =
         },
         T.of
       ),
+      T.map((data) => DispatchCommandResponse.encode({ ok: true, data })),
       (t) => t()
     );
   };
