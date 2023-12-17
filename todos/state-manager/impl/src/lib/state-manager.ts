@@ -1,5 +1,5 @@
 import * as RD from '@devexperts/remote-data-ts';
-import { ChangeTodoStateCommand } from '@nest-plus-io-ts-experiment/change-todo-command-in-todos';
+import { createChangeTodoStateCommand } from '@nest-plus-io-ts-experiment/change-todo-command-in-todos';
 import { createCreateTodoCommand } from '@nest-plus-io-ts-experiment/create-todo-command-in-todos';
 import { TodosServerApi } from '@nest-plus-io-ts-experiment/server-api-type-in-todos';
 import { TodosStateManager } from '@nest-plus-io-ts-experiment/state-manager-type-in-todos';
@@ -20,14 +20,13 @@ export const getTodosStateManager = (
         RD.toOption,
         O.chain(findFirst((a) => a.id === todoId)),
         TE.fromOption(() => 'Not found todo.' as const),
-        TE.map(
+        TE.chainOptionKW(() => 'Invalid ChangeTodoStateCommand.' as const)(
           (a) =>
-            ({
-              _tag: 'ChangeTodoState' as const,
+            createChangeTodoStateCommand({
               id: todoId,
-              state: a.state === 'IN_PROGRESS' ? 'COMPLETED' : 'IN_PROGRESS',
+              state: a.state,
               updatedAt: new Date(),
-            } satisfies ChangeTodoStateCommand)
+            })
         ),
         TE.chainW(api.dispatch),
         TE.fold(
